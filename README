@@ -1,0 +1,238 @@
+# Nirmal-1
+
+An original, modular AGI research system decoupling cognitive orchestration from an efficient hybrid state-space / attention neural backbone.
+
+---
+
+## Overview
+
+**Nirmal-1** explores a modular architecture for cognitive systems:
+- **Core Neural Backbone**: A hybrid sequence model combining **DeltaNet** (linear associative recurrence with $O(1)$ recurrent inference state) with periodic **Grouped Query Attention (GQA)** with RoPE, augmented by a sparse **Top-2 Mixture of Experts (MoE)** with auxiliary load balancing.
+- **Cognitive Orchestration Layer**: Separates working memory, persistent memory retrieval, structured reasoning traces, dynamic task planning (DAGs), grounded tool sandboxing, and episodic experience replay from the underlying language model.
+
+> **Research Transparency**: Nirmal-1 is an active research exploration. It is **not** claimed to be an artificial general intelligence, nor does it guarantee emergent reasoning. All components are designed to be reproducible, modular, and empirically testable.
+
+---
+
+## Directory Structure
+
+```
+Nirmal-1/
+├── AGI_SPEC.md              # Formal AGI system specification & interfaces
+├── README.md                # Project documentation & quick start
+├── pyproject.toml           # Package definition & build configuration
+├── requirements.txt         # Core dependencies
+├── src/
+│   └── nirmal/
+│       ├── __init__.py      # Package exports
+│       ├── configuration_nirmal.py # NirmalConfig & validation
+│       ├── model.py         # NirmalModel & NirmalForCausalLM
+│       ├── attention.py     # GQA attention, RoPE, RMSNorm, KV-cache
+│       ├── delta_net.py     # DeltaNet linear associative memory layer
+│       ├── moe.py           # Sparse Top-2 MoE, SwiGLU, Router z-loss
+│       ├── memory.py        # WorkingMemory, PersistentMemory, Retrieval
+│       ├── reasoning.py     # ReasoningTrace, verification hooks
+│       ├── planning.py      # PlanNode, TaskGraph, dynamic replanner
+│       ├── learning.py      # Structured Experience schema, EpisodicBuffer
+│       ├── tools.py         # Tool registry & execution sandbox
+│       ├── generation.py    # Autoregressive generator (greedy, sampling, cache)
+│       └── agent/           # Higher-order Cognitive Architecture
+│           ├── controller.py       # Deterministic state-machine cognitive controller
+│           ├── learning_engine.py  # CognitiveLearningEngine (semantic & procedural induction)
+│           ├── world_state.py      # Environmental state tracking & audit history
+│           ├── world_model.py      # Explicit learned world model & causal graph
+│           ├── verification.py     # Deterministic ground-truth verification
+│           └── memory/             # Semantic, Episodic, and Procedural long-term memories
+├── evals/                   # Cognitive behavioral evaluation suite
+│   ├── causal_simulator.py  # Procedural Causal DAG environment (interventions, confounders, shifts)
+│   ├── novel_tasks.py       # 3 novel task families (Encoding, Resource, Distractor)
+│   ├── open_world.py        # Latent dynamics open-world environment
+│   ├── transfer_tasks.py    # 4-partition dataset generator across seeds
+│   ├── test_world_model.py  # World model representation & graph structures
+│   ├── test_prediction.py   # Predict-before-act & prediction error
+│   ├── test_counterfactual_reasoning.py # Counterfactual consequence evaluation
+│   ├── test_causal_discovery.py         # Unlabelled rule discovery
+│   ├── test_intervention.py # Disambiguating P(Y|X) vs P(Y|do(X))
+│   ├── test_uncertainty.py  # Brier score calibration & active experimentation
+│   ├── test_model_revision.py           # Unexpected side-effects & error reduction
+│   ├── test_distribution_shift.py       # Multi-environment shift (A -> B -> C)
+│   ├── test_long_horizon.py # Multi-step planning horizons (1, 2, 4, 8, 16)
+│   ├── test_world_model_ablation.py     # 8-way ablation matrix
+│   └── test_*.py            # Controller, memory, learning, and planning suites
+├── training/
+│   ├── train.py             # End-to-end PyTorch training pipeline
+│   ├── dataset.py           # Synthetic & text dataset loaders
+│   ├── checkpoint.py        # Atomic model & optimizer checkpoint manager
+│   ├── v8_2_data_engine.py  # Production dataset cleaning, deduplication, sharding & streaming
+│   ├── v8_2_mixture_experiments.py # 12-domain candidate mixture evaluation & quality ablations
+│   └── v8_3_gate_engine.py  # Final pre-training GO/NO-GO gate, circuit breakers & memory auditor
+├── tests/                   # Core neural & data unit test suite (52 tests)
+├── experiments/             # Experiment logs, audit outputs, and ablation setups
+└── scripts/
+    ├── run_prototype.py     # Local verification & interactive demo script
+    ├── run_v8_3_final_gate.py # Master V8.3 pre-training launch gate runner
+    ├── run_v8_2_dataset_audit.py # 15-stage V8.2 production dataset acquisition & audit
+    ├── run_v8_1_prelaunch_validation.py # 15-stage V8.1 final architecture pre-launch audit
+    ├── run_ablations.py     # 4-axis cognitive ablation benchmarking script
+    ├── run_learning_evals.py # 3-phase learning, retention, interference, & 7-way ablation benchmark
+    ├── run_transfer_evals.py # 5-seed Transfer Learning V2 statistical evaluation & learning curves
+    ├── run_open_learning_evals.py # 10-seed Open-Ended Learning V3 evaluation
+    ├── run_world_model_evals.py   # 10-seed World Model & General Reasoning V4 evaluation
+    └── run_world_model_blind_eval.py # Randomized blind procedural causal trials
+
+---
+
+## Quick Start
+
+### 1. Installation
+Install requirements (PyTorch CPU wheel recommended for local development):
+```bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+### 2. Run Test Suite (231/231 Passing)
+Validate all neural core modules, data pipeline invariants, binary sharding, streaming loaders, pilot circuit breakers, and cognitive agent evaluations:
+```bash
+pytest tests/ evals/ -q
+```
+
+### 3. Run Final Pre-Training GO / NO-GO Gate V8.3 Benchmark
+Execute the definitive 12-gate pre-training launch audit verifying direct physical shard token counts, zero leakage, MinHash near-duplicate rate, tokenizer freeze, Candidate C artifact size (48.30 GB), memory models, streaming dataloader stress, pilot run descent with circuit breakers, and the Hard Launch Rules (A-I):
+```bash
+python scripts/run_v8_3_final_gate.py
+```
+Full technical specifications, failure analysis, and the complete gate report are available in [`docs/v8_3_final_gate.md`](file:///docs/v8_3_final_gate.md).
+
+### 4. Run Production Dataset Acquisition & Verification V8.2 Benchmark
+Execute the comprehensive 15-stage production dataset audit verifying 7-stage deterministic quality filtering, exact and MinHash fuzzy deduplication, 3-way hard split isolation, evaluation holdout protection, uint16 binary sharding with int64 index boundaries, zero-RAM streaming resumption, 12-domain downstream mixture benchmarking, and the automated completeness gate:
+```bash
+python scripts/run_v8_2_dataset_audit.py
+```
+Full technical specifications, physical storage accounting tables, and the complete audit report are available in [`docs/v8_2_dataset_report.md`](file:///docs/v8_2_dataset_report.md).
+
+### 4. Run Final Architecture Pre-Launch Validation V8.1 Benchmark
+Execute the comprehensive 15-stage pre-launch audit verifying exact parameter counts, physical serialized artifact sizing (48.30 GB), PyTorch memory models, multi-worker distributed equivalence, checkpoint recovery, throughput, scaling projections, and the 14-gate launch checklist:
+```bash
+python scripts/run_v8_1_prelaunch_validation.py
+```
+Full technical specifications, failure analysis, and the complete audit report are available in [`docs/v8_1_prelaunch_validation.md`](file:///docs/v8_1_prelaunch_validation.md).
+
+### 4. Run Final Architecture & Large-Scale Training System V8 Benchmark
+Execute candidate architecture search, physical 45-50 GB sizing audit, memory budget calculations across clusters, and training dry-run with simulated interruption recovery:
+```bash
+python scripts/run_v8_architecture_search.py
+python scripts/run_v8_memory_audit.py
+python scripts/run_v8_training_dryrun.py
+```
+Full technical specifications and engineering blueprints are available in [`docs/v8_final_architecture.md`](file:///docs/v8_final_architecture.md).
+
+### 4. Run Scaling Laws, Tokenization, & Capability V7 Benchmark
+Execute the zero-leakage data audit, parameter & data scaling laws fitting, context scaling, tokenizer A/B benchmark, curriculum ablations, 8-way baseline matrix, and the Preliminary NIRMAL AGI CAPABILITY INDEX:
+```bash
+python scripts/run_v7_leakage_audit.py
+python scripts/run_v7_scaling.py
+python scripts/run_v7_capability_eval.py
+```
+Detailed findings, empirical power-law exponents, and the physical 45-50 GB architecture layout are available in [`docs/v7_scaling_report.md`](file:///docs/v7_scaling_report.md).
+
+### 4. Run Clean Pretraining & Capability Foundation V6 Benchmark
+Execute data leakage audit, 12-domain clean pretraining, token scaling, progressive vs. mixed curriculum, standalone neural capability benchmarks, and the 8-way baseline matrix:
+```bash
+python scripts/run_v6_leakage_audit.py
+python scripts/run_v6_training.py
+python scripts/run_v6_evals.py
+```
+
+### 4. Run Independent Scientific Audit V5.1 Benchmark
+Execute reproduction and adversarial falsification audit:
+```bash
+### 1. Run Production Data Expansion & Infrastructure Launch Gate (V8.4)
+Evaluate physical token count, hardware readiness, and joint launch gate:
+```bash
+# Directly count physical tokens from staged disk shards
+python scripts/count_verified_production_tokens.py
+
+# Evaluate production data readiness (volume, licenses, checksums, dups)
+python scripts/check_production_data_ready.py
+
+# Probe physical host hardware against Candidate C 25.91B requirements
+python scripts/check_training_hardware_ready.py
+
+# Run joint launch gate and cost model projections
+python scripts/run_v8_4_launch_readiness.py
+```
+
+### 2. Run Pre-Training Launch Gate Audit (V8.3)
+Execute the final independent pre-training launch gate and circuit breaker audit:
+```bash
+python scripts/run_v8_3_final_gate.py
+```
+
+### 3. Run Production Dataset Acquisition & Verification (V8.2)
+```bash
+python scripts/run_v8_2_dataset_audit.py
+```
+
+### 4. Run Pre-Launch Architecture Validation (V8.1)
+```bash
+python scripts/run_v8_1_prelaunch_validation.py
+```
+
+### 5. Run Independent Scientific Audit (V5.1)
+```bash
+python scripts/run_v5_independent_audit.py
+```
+
+### 5. Run Neural Cognition & Generalization V5 Benchmark
+Execute 5-seed statistical pretraining, architecture scaling (Tiny, Small, Medium), 8-domain curriculum breakdown, Section 21 tokenization stress test, and the Central 3-Way System Comparison (Symbolic vs Neural vs Hybrid):
+```bash
+python scripts/run_neural_experiments.py
+python scripts/run_neural_blind_eval.py
+```
+
+### 4. Run World Model & General Reasoning V4 Benchmark
+Execute 10-seed evaluation, 8-way ablation matrix, multi-step horizon projection (1..16), and causal disambiguation:
+```bash
+python scripts/run_world_model_evals.py
+python scripts/run_world_model_blind_eval.py
+```
+
+### 5. Run Open-Ended Learning V3 Statistical Benchmark
+Execute 10-seed evaluation, learning curves ($0 \dots 64$), and 9-way causal ablation matrix:
+```bash
+python scripts/run_open_learning_evals.py
+```
+
+### 5. Run Transfer Learning V2 Statistical Benchmark
+Run 5-seed evaluation, learning curves ($0 \dots 16$ episodes), and 7 memory ablations:
+```bash
+python scripts/run_transfer_evals.py
+```
+
+### 6. Run Cognitive Learning V1 Benchmark
+Execute the 3-phase evaluation protocol, retention/interference tests, and 7-way ablation matrix:
+```bash
+python scripts/run_learning_evals.py
+```
+
+### 7. Run Neural Prototype Demo
+Test forward pass, backward step, checkpoint saving/loading, and text generation:
+```bash
+python scripts/run_prototype.py
+```
+
+---
+
+## Core Neural Specifications (Baseline Prototype)
+
+- **Hidden Size**: 512
+- **Layers**: 12
+- **Attention Heads**: 8 Query Heads / 2 Key-Value Heads (GQA)
+- **Head Dimension**: 64
+- **Vocabulary Size**: 32,000
+- **Context Length**: 8,192
+- **Hybrid Attention**: Full GQA every 4th layer; DeltaNet linear recurrence on remaining layers
+- **Sparse MoE**: 8 experts total, Top-2 active routing per token with load-balancing loss and router z-loss
+- **Layer Normalization**: RMSNorm ($\epsilon = 10^{-6}$)
+- **Positional Encoding**: Rotary Position Embeddings (RoPE)
