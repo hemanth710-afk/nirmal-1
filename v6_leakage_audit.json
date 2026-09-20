@@ -1,0 +1,79 @@
+{
+  "timestamp_unix": 1788698285.1501086,
+  "elapsed_seconds": 0.024,
+  "generator_version": "v6.0",
+  "leakage_passed": true,
+  "error_message": null,
+  "train_count": 720,
+  "train_unique": 720,
+  "train_duplicate_rate_pct": 0.0,
+  "val_count": 240,
+  "val_unique": 240,
+  "test_count": 240,
+  "test_unique": 240,
+  "train_val_overlap": 0,
+  "train_test_overlap": 0,
+  "val_test_overlap": 0,
+  "domain_counts": {
+    "A_language_modeling": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "B_mathematical_reasoning": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "C_symbolic_reasoning": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "D_sequence_prediction": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "E_state_transitions": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "F_causal_reasoning": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "G_planning": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "H_tool_use": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "I_error_correction": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "J_code_transformation": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "K_explanation_following": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "L_structured_data": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    }
+  }
+}

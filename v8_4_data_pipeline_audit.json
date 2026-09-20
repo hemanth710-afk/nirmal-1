@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-09-06T15:48:20Z",
+  "subsystems": {
+    "license_provenance": {
+      "status": "PASS",
+      "allowed_licenses_count": 7,
+      "rejected_licenses_tested": 5,
+      "rejection_accuracy": "100%",
+      "fail_closed": true
+    },
+    "quality_filters": {
+      "status": "PASS",
+      "filters_verified": [
+        "empty_or_too_short",
+        "too_long",
+        "contains_null_bytes",
+        "excessive_unprintable_chars",
+        "invalid_unicode_replacement",
+        "excessive_char_repetition",
+        "excessive_line_repetition",
+        "spam_or_high_punctuation"
+      ],
+      "fail_closed": true
+    },
+    "resumability": {
+      "status": "PASS",
+      "phase1_docs": 25,
+      "phase2_resumed_docs": 25,
+      "duplicate_records_on_resume": 0,
+      "skipped_records_on_resume": 0,
+      "deterministic_recovery": true
+    },
+    "deduplication": {
+      "status": "PASS",
+      "exact_duplicates_caught": 1,
+      "near_duplicates_caught": 1,
+      "zero_exact_duplicates_guaranteed": true,
+      "boilerplate_protection_verified": true
+    },
+    "split_isolation": {
+      "status": "PASS",
+      "exact_leakage_rejection": "VERIFIED (fail-closed)",
+      "near_leakage_rejection": "VERIFIED (fail-closed)",
+      "benchmark_entity_protection": "VERIFIED"
+    },
+    "tokenizer": {
+      "status": "PASS",
+      "name": "ByteLevelBPE_32K",
+      "vocab_size": 32000,
+      "checksum": "21e5e370e3e1c0e396f65d19925e851e540ca17e70d4236763326def714251cf",
+      "storage_dtype": "uint16 (2 bytes/token)",
+      "lossless_roundtrip": "100% VERIFIED"
+    },
+    "sharding": {
+      "status": "PASS",
+      "format": ".bin (uint16 little endian) + .idx (int64 document offsets)",
+      "atomic_writes": "VERIFIED (.tmp + os.replace)",
+      "corruption_detection": "VERIFIED (fail-closed on byte alteration)",
+      "random_access": "VERIFIED via .idx offset indexing"
+    },
+    "manifest": {
+      "status": "PASS",
+      "cryptographic_signature": "SHA-256 self-signature",
+      "tamper_detection": "VERIFIED (fail-closed)",
+      "dataset_fingerprinting": "VERIFIED"
+    }
+  },
+  "benchmarks": {
+    "text_normalization_docs_per_sec": 667645.88,
+    "tokenization_throughput_tokens_per_sec": 206896.99,
+    "tokenization_throughput_docs_per_sec": 2287.9,
+    "deduplication_throughput_docs_per_sec": 162.23,
+    "shard_write_throughput_mb_per_sec": 9.03,
+    "shard_write_throughput_tokens_per_sec": 4733083.33,
+    "shard_read_throughput_mb_per_sec": 37.27,
+    "shard_read_throughput_tokens_per_sec": 19539762.97
+  },
+  "physical_accounting": {
+    "LOCAL_VERIFIED_TOKENS": 233997,
+    "REMOTE_VERIFIED_TOKENS": 0,
+    "PLANNED_TOKENS": 200000000000,
+    "ESTIMATED_TOKENS": 0,
+    "VERIFIED_TOKEN_DEFICIT": 199999766003,
+    "COMPLETION_PERCENTAGE": 0.000117,
+    "PHYSICAL_SHARD_COUNT": 6,
+    "PHYSICAL_DOCUMENTS": 737,
+    "PRODUCTION_GATE_STATUS": "NO-GO (Deficit > 0)"
+  },
+  "scalability_projections": {
+    "10B": {
+      "tokens": 10000000000,
+      "raw_text_storage_gb": 37.25,
+      "binary_uint16_storage_gb": 18.63,
+      "estimated_shards_at_100M_tok": 100,
+      "estimated_documents": 20000000,
+      "exact_dedup_hash_index_gb": 1.19,
+      "minhash_lsh_index_gb": 9.54,
+      "scratch_staging_space_gb": 55.88,
+      "manifest_size_mb": 1.05,
+      "streaming_read_mb_per_sec_at_100k_tok_s": 0.19,
+      "estimate_classification": "ANALYTICAL_ESTIMATE_ONLY (Not measured)"
+    },
+    "50B": {
+      "tokens": 50000000000,
+      "raw_text_storage_gb": 186.26,
+      "binary_uint16_storage_gb": 93.13,
+      "estimated_shards_at_100M_tok": 500,
+      "estimated_documents": 100000000,
+      "exact_dedup_hash_index_gb": 5.96,
+      "minhash_lsh_index_gb": 47.68,
+      "scratch_staging_space_gb": 279.4,
+      "manifest_size_mb": 1.24,
+      "streaming_read_mb_per_sec_at_100k_tok_s": 0.19,
+      "estimate_classification": "ANALYTICAL_ESTIMATE_ONLY (Not measured)"
+    },
+    "100B": {
+      "tokens": 100000000000,
+      "raw_text_storage_gb": 372.53,
+      "binary_uint16_storage_gb": 186.26,
+      "estimated_shards_at_100M_tok": 1000,
+      "estimated_documents": 200000000,
+      "exact_dedup_hash_index_gb": 11.92,
+      "minhash_lsh_index_gb": 95.37,
+      "scratch_staging_space_gb": 558.79,
+      "manifest_size_mb": 1.49,
+      "streaming_read_mb_per_sec_at_100k_tok_s": 0.19,
+      "estimate_classification": "ANALYTICAL_ESTIMATE_ONLY (Not measured)"
+    },
+    "200B": {
+      "tokens": 200000000000,
+      "raw_text_storage_gb": 745.06,
+      "binary_uint16_storage_gb": 372.53,
+      "estimated_shards_at_100M_tok": 2000,
+      "estimated_documents": 400000000,
+      "exact_dedup_hash_index_gb": 23.84,
+      "minhash_lsh_index_gb": 190.73,
+      "scratch_staging_space_gb": 1117.59,
+      "manifest_size_mb": 1.98,
+      "streaming_read_mb_per_sec_at_100k_tok_s": 0.19,
+      "estimate_classification": "ANALYTICAL_ESTIMATE_ONLY (Not measured)"
+    },
+    "500B": {
+      "tokens": 500000000000,
+      "raw_text_storage_gb": 1862.65,
+      "binary_uint16_storage_gb": 931.32,
+      "estimated_shards_at_100M_tok": 5000,
+      "estimated_documents": 1000000000,
+      "exact_dedup_hash_index_gb": 59.6,
+      "minhash_lsh_index_gb": 476.84,
+      "scratch_staging_space_gb": 2793.97,
+      "manifest_size_mb": 3.44,
+      "streaming_read_mb_per_sec_at_100k_tok_s": 0.19,
+      "estimate_classification": "ANALYTICAL_ESTIMATE_ONLY (Not measured)"
+    }
+  },
+  "verdict": {
+    "DATA_PIPELINE_SOFTWARE": "GO (Fully tested, hardened, fail-closed)",
+    "LOCAL_DATA_VALIDATION": "GO (100% verified across 233,997 staged tokens)",
+    "PRODUCTION_DATA_ACQUISITION": "NOT READY (Physical corpus not staged)",
+    "200B_TOKEN_DATASET": "NOT AVAILABLE (Deficit = 199,999,766,003 tokens)"
+  }
+}

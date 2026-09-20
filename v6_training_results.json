@@ -1,0 +1,208 @@
+{
+  "timestamp_unix": 1788698411.4363172,
+  "total_train_examples": 600,
+  "total_val_examples": 180,
+  "total_test_examples": 180,
+  "data_scale_experiment": {
+    "scale_summary": {
+      "mode": "mixed",
+      "seed": 42,
+      "total_tokens_trained": 20480,
+      "total_steps": 80,
+      "initial_val_loss": 4.8504,
+      "final_val_loss": 2.3869,
+      "loss_improvement": 2.4635,
+      "initial_perplexity": 127.79,
+      "final_perplexity": 10.88,
+      "perplexity_reduction": 116.91,
+      "average_throughput": 662.6,
+      "stability_passed": true,
+      "telemetry_curve": [
+        {
+          "step": 10,
+          "total_tokens": 2560,
+          "train_loss": 3.5767,
+          "val_loss": 3.7502,
+          "val_perplexity": 42.53,
+          "grad_norm": 5.8393,
+          "router_balance_score": 1.275,
+          "throughput_tok_per_sec": 848.2,
+          "learning_rate": 0.0004,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 20,
+          "total_tokens": 5120,
+          "train_loss": 2.582,
+          "val_loss": 3.1287,
+          "val_perplexity": 22.84,
+          "grad_norm": 4.5141,
+          "router_balance_score": 1.2835,
+          "throughput_tok_per_sec": 864.1,
+          "learning_rate": 0.00038217439622243544,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 30,
+          "total_tokens": 7680,
+          "train_loss": 2.078,
+          "val_loss": 2.8684,
+          "val_perplexity": 17.61,
+          "grad_norm": 6.8014,
+          "router_balance_score": 1.2924,
+          "throughput_tok_per_sec": 922.7,
+          "learning_rate": 0.00033222816433457205,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 40,
+          "total_tokens": 10240,
+          "train_loss": 1.5793,
+          "val_loss": 2.556,
+          "val_perplexity": 12.88,
+          "grad_norm": 5.7236,
+          "router_balance_score": 1.2998,
+          "throughput_tok_per_sec": 784.9,
+          "learning_rate": 0.00026005376811213656,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 50,
+          "total_tokens": 12800,
+          "train_loss": 1.1339,
+          "val_loss": 2.4843,
+          "val_perplexity": 11.99,
+          "grad_norm": 4.2949,
+          "router_balance_score": 1.3052,
+          "throughput_tok_per_sec": 984.2,
+          "learning_rate": 0.00017994623188786343,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 60,
+          "total_tokens": 15360,
+          "train_loss": 1.0432,
+          "val_loss": 2.4718,
+          "val_perplexity": 11.84,
+          "grad_norm": 6.4098,
+          "router_balance_score": 1.3085,
+          "throughput_tok_per_sec": 805.7,
+          "learning_rate": 0.00010777183566542799,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 70,
+          "total_tokens": 17920,
+          "train_loss": 0.9366,
+          "val_loss": 2.3547,
+          "val_perplexity": 10.53,
+          "grad_norm": 7.5176,
+          "router_balance_score": 1.3101,
+          "throughput_tok_per_sec": 873.9,
+          "learning_rate": 5.782560377756458e-05,
+          "has_nan_or_inf": false
+        },
+        {
+          "step": 80,
+          "total_tokens": 20480,
+          "train_loss": 0.9996,
+          "val_loss": 2.3869,
+          "val_perplexity": 10.88,
+          "grad_norm": 6.0921,
+          "router_balance_score": 1.3109,
+          "throughput_tok_per_sec": 977.6,
+          "learning_rate": 4e-05,
+          "has_nan_or_inf": false
+        }
+      ],
+      "token_milestone_results": {
+        "10K": {
+          "tokens": 10240,
+          "train_loss": 1.5793,
+          "val_loss": 2.556,
+          "val_ppl": 12.88
+        },
+        "20K": {
+          "tokens": 20480,
+          "train_loss": 0.9996,
+          "val_loss": 2.3869,
+          "val_ppl": 10.88
+        }
+      }
+    },
+    "milestone_results": {
+      "10K": {
+        "tokens": 10240,
+        "train_loss": 1.5793,
+        "val_loss": 2.556,
+        "val_ppl": 12.88
+      },
+      "20K": {
+        "tokens": 20480,
+        "train_loss": 0.9996,
+        "val_loss": 2.3869,
+        "val_ppl": 10.88
+      }
+    }
+  },
+  "curriculum_experiment": {
+    "mixed_val_loss": 2.3869,
+    "mixed_ppl": 10.88,
+    "progressive_val_loss": 2.424,
+    "progressive_ppl": 11.29,
+    "progressive_advantage": -0.0371
+  },
+  "5_seed_stability": {
+    "seed_details": [
+      {
+        "seed": 42,
+        "initial_val_loss": 4.8744,
+        "final_val_loss": 2.6992,
+        "loss_improvement": 2.1752,
+        "final_ppl": 14.87,
+        "throughput": 1546.3,
+        "stability_passed": true
+      },
+      {
+        "seed": 123,
+        "initial_val_loss": 4.9333,
+        "final_val_loss": 2.8829,
+        "loss_improvement": 2.0504,
+        "final_ppl": 17.87,
+        "throughput": 1502.1,
+        "stability_passed": true
+      },
+      {
+        "seed": 456,
+        "initial_val_loss": 4.9394,
+        "final_val_loss": 2.7528,
+        "loss_improvement": 2.1866,
+        "final_ppl": 15.69,
+        "throughput": 1524.3,
+        "stability_passed": true
+      },
+      {
+        "seed": 789,
+        "initial_val_loss": 4.8322,
+        "final_val_loss": 2.6361,
+        "loss_improvement": 2.1961,
+        "final_ppl": 13.96,
+        "throughput": 1484.9,
+        "stability_passed": true
+      },
+      {
+        "seed": 1011,
+        "initial_val_loss": 4.8195,
+        "final_val_loss": 2.7421,
+        "loss_improvement": 2.0774,
+        "final_ppl": 15.52,
+        "throughput": 1512.8,
+        "stability_passed": true
+      }
+    ],
+    "mean_loss_improvement": 2.1371,
+    "mean_final_ppl": 15.58,
+    "mean_throughput_tok_sec": 1514.1,
+    "all_stability_passed": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "milestone": "NIRMAL-1 V8: COMPUTE BUDGET & SCENARIOS",
+  "active_parameters": 4239282176,
+  "h100_assumed_mfu_tflops": 450.0,
+  "scenarios": {
+    "scenario_low_200b": {
+      "tokens": 200000000000,
+      "tokens_str": "200 Billion tokens",
+      "compute_flops": 5.0871386112e+21,
+      "expected_loss": 0.922,
+      "days_8x_h100": 16.4,
+      "days_64x_h100": 2.0,
+      "capability_projection": "Strong linguistic & structural baseline; basic multi-step reasoning"
+    },
+    "scenario_medium_500b": {
+      "tokens": 500000000000,
+      "tokens_str": "500 Billion tokens",
+      "compute_flops": 1.2717846528e+22,
+      "expected_loss": 0.848,
+      "days_8x_h100": 40.9,
+      "days_64x_h100": 5.1,
+      "capability_projection": "Robust coding, math, tool calling, and deep compositional planning"
+    },
+    "scenario_high_1t": {
+      "tokens": 1000000000000,
+      "tokens_str": "1.0 Trillion tokens",
+      "compute_flops": 2.5435693056e+22,
+      "expected_loss": 0.797,
+      "days_8x_h100": 81.8,
+      "days_64x_h100": 10.2,
+      "capability_projection": "Full cognitive saturation, high generalization, minimal transfer decay"
+    }
+  }
+}

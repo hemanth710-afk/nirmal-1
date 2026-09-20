@@ -1,0 +1,103 @@
+{
+  "milestone": "NIRMAL-1 V8.1: THROUGHPUT & WALL-CLOCK AUDIT",
+  "interconnect_audit": {
+    "intra_node_technology": "NVLink 4 (900 GB/s bidirectional)",
+    "inter_node_technology": "8x 400 Gbps InfiniBand (3.2 Tbps aggregate)",
+    "moe_alltoall_step_volume_mb": 1344.0,
+    "communication_to_computation_ratio": 0.028,
+    "is_comm_bottleneck": false
+  },
+  "throughput_scaling_curve": [
+    {
+      "gpu_count": 1,
+      "efficiency": 1.0,
+      "tokens_per_sec": 17500,
+      "achieved_tflops": 445.2,
+      "estimated_mfu_pct": 45.02
+    },
+    {
+      "gpu_count": 2,
+      "efficiency": 0.97,
+      "tokens_per_sec": 33950,
+      "achieved_tflops": 863.7,
+      "estimated_mfu_pct": 43.66
+    },
+    {
+      "gpu_count": 4,
+      "efficiency": 0.955,
+      "tokens_per_sec": 66850,
+      "achieved_tflops": 1700.7,
+      "estimated_mfu_pct": 42.99
+    },
+    {
+      "gpu_count": 8,
+      "efficiency": 0.93,
+      "tokens_per_sec": 130200,
+      "achieved_tflops": 3312.3,
+      "estimated_mfu_pct": 41.86
+    },
+    {
+      "gpu_count": 16,
+      "efficiency": 0.888,
+      "tokens_per_sec": 248640,
+      "achieved_tflops": 6325.4,
+      "estimated_mfu_pct": 39.97
+    },
+    {
+      "gpu_count": 32,
+      "efficiency": 0.86,
+      "tokens_per_sec": 481600,
+      "achieved_tflops": 12251.9,
+      "estimated_mfu_pct": 38.71
+    },
+    {
+      "gpu_count": 64,
+      "efficiency": 0.825,
+      "tokens_per_sec": 924000,
+      "achieved_tflops": 23506.6,
+      "estimated_mfu_pct": 37.14
+    }
+  ],
+  "realistic_wallclock_estimates": [
+    {
+      "token_budget": "50 Billion",
+      "raw_tokens": 50000000000,
+      "pure_compute_days_8x_h100": 4.44,
+      "realistic_wallclock_days_8x_h100": 5.44,
+      "pure_compute_days_64x_h100": 0.63,
+      "realistic_wallclock_days_64x_h100": 0.77
+    },
+    {
+      "token_budget": "100 Billion",
+      "raw_tokens": 100000000000,
+      "pure_compute_days_8x_h100": 8.89,
+      "realistic_wallclock_days_8x_h100": 10.89,
+      "pure_compute_days_64x_h100": 1.25,
+      "realistic_wallclock_days_64x_h100": 1.53
+    },
+    {
+      "token_budget": "200 Billion (Target)",
+      "raw_tokens": 200000000000,
+      "pure_compute_days_8x_h100": 17.78,
+      "realistic_wallclock_days_8x_h100": 21.78,
+      "pure_compute_days_64x_h100": 2.51,
+      "realistic_wallclock_days_64x_h100": 3.07
+    },
+    {
+      "token_budget": "500 Billion",
+      "raw_tokens": 500000000000,
+      "pure_compute_days_8x_h100": 44.45,
+      "realistic_wallclock_days_8x_h100": 54.45,
+      "pure_compute_days_64x_h100": 6.26,
+      "realistic_wallclock_days_64x_h100": 7.67
+    }
+  ],
+  "overhead_breakdown": {
+    "communication_overhead_pct": 8.0,
+    "io_data_loading_pct": 2.0,
+    "checkpointing_overhead_pct": 2.0,
+    "evaluation_overhead_pct": 3.0,
+    "preemption_and_restart_overhead_pct": 7.5,
+    "composite_overhead_multiplier": 1.225
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "mode": "DRY_RUN",
+  "timestamp": "2026-09-13T16:44:49Z",
+  "preflight_passed": true,
+  "preflight_checks": {
+    "A_disk_capacity": {
+      "status": "PASS",
+      "free_space_gb": 57.24,
+      "required_gb": 10.0
+    },
+    "B_temp_staging_capacity": {
+      "status": "PASS",
+      "path": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\staging"
+    },
+    "C_output_shard_capacity": {
+      "status": "PASS",
+      "path": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\shards"
+    },
+    "D_manifest_destination": {
+      "status": "PASS",
+      "path": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data"
+    },
+    "E_tokenizer_checksum": {
+      "status": "PASS",
+      "expected": "21e5e370e3e1c0e396f65d19925e851e540ca17e70d4236763326def714251cf",
+      "actual": "21e5e370e3e1c0e396f65d19925e851e540ca17e70d4236763326def714251cf"
+    },
+    "F_processing_config_checksum": {
+      "status": "PASS",
+      "signature": "9db996f13af0f4fa3a6cbf4733f756d7284f474ca136842c56756fe1969a4e98"
+    },
+    "G_dedup_config": {
+      "status": "PASS",
+      "exact_dedup": "SHA-256 (0 duplicates)",
+      "minhash_num_perm": 64,
+      "minhash_num_bands": 16,
+      "jaccard_threshold": 0.85,
+      "boilerplate_protection": true
+    },
+    "H_split_config": {
+      "status": "PASS",
+      "train_ratio": 0.8,
+      "val_ratio": 0.1,
+      "test_ratio": 0.1,
+      "isolation_rule": "PAIRWISE_DISJOINT"
+    },
+    "I_provenance_config": {
+      "status": "PASS",
+      "required_fields": [
+        "source_id",
+        "license",
+        "license_evidence",
+        "retrieval_timestamp",
+        "original_size_bytes",
+        "measured_token_count",
+        "source_sha256"
+      ]
+    },
+    "J_source_license_evidence": {
+      "status": "PASS",
+      "violations": []
+    },
+    "K_resume_checkpoint_dir": {
+      "status": "PASS",
+      "path": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\experiments\\.acquisition_checkpoints"
+    },
+    "L_required_dependencies": {
+      "status": "PASS",
+      "installed": {
+        "torch": "2.14.0+cu132",
+        "numpy": "2.5.1"
+      }
+    },
+    "M_file_permissions": {
+      "status": "PASS",
+      "workspace_writable": true
+    },
+    "N_free_ram": {
+      "status": "PASS",
+      "available_ram_gb": 1.49,
+      "minimum_required_gb": 0.25
+    },
+    "O_cuda_status_diagnostic": {
+      "status": "PASS",
+      "cuda_available": true,
+      "device_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "note": "CUDA is monitored for diagnostics; not required for data ingestion."
+    }
+  },
+  "acquisition_plan": {
+    "version": "v8.4.0",
+    "timestamp": "2026-09-13T16:44:39Z",
+    "directories": {
+      "staging": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\staging",
+      "scratch": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\scratch",
+      "final_shards": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\shards",
+      "checkpoints": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\experiments\\.acquisition_checkpoints",
+      "manifest": "C:\\Users\\L.Thirumala Teja\\OneDrive\\Desktop\\Nirmal 1\\data\\NIRMAL-DATA-PRODUCTION.manifest.json"
+    },
+    "source_processing_order": [
+      "fineweb_edu_permissive",
+      "the_stack_v2_permissive",
+      "arxiv_open_access_papers",
+      "dolma_v1_7_permissive",
+      "redpajama_v2_permissive",
+      "wikipedia_open_corpus"
+    ],
+    "planned_token_volume": 200000000000,
+    "verified_staged_token_volume": 233997,
+    "target_production_tokens": 200000000000,
+    "deficit_tokens": 199999766003,
+    "sources_breakdown": {
+      "verified_count": 1,
+      "planned_count": 6,
+      "rejected_count": 2
+    },
+    "execution_policy": "DRY_RUN_DEFAULT_STRICT_FAIL_CLOSED"
+  },
+  "token_accounting": {
+    "LOCAL_VERIFIED": 233997,
+    "REMOTE_VERIFIED": 0,
+    "PLANNED": 200000000000,
+    "ESTIMATED": 0,
+    "token_deficit": 199999766003,
+    "completion_percentage": 0.000117
+  },
+  "gates": {
+    "GATE_1_TOKEN_COUNT": {
+      "passed": false,
+      "target": 200000000000,
+      "verified_tokens": 233997,
+      "deficit": 199999766003,
+      "status": "FAIL",
+      "reason": "Deficit of 199,999,766,003 tokens (99.999883%)"
+    },
+    "GATE_2_EXACT_DEDUP": {
+      "passed": true,
+      "policy": "SHA-256 exact content hash",
+      "exact_duplicate_violations": 0,
+      "status": "PASS"
+    },
+    "GATE_3_NEAR_DEDUP": {
+      "passed": true,
+      "policy": "MinHash LSH (64 perms, 16 bands, Jaccard >= 0.85)",
+      "boilerplate_preservation": true,
+      "status": "PASS"
+    },
+    "GATE_4_SPLIT_ISOLATION": {
+      "passed": true,
+      "policy": "Strict zero pairwise leakage (Train \u2229 Val = 0, Train \u2229 Test = 0, Val \u2229 Test = 0)",
+      "leakage_violations": 0,
+      "status": "PASS"
+    },
+    "GATE_5_TOKENIZER": {
+      "passed": true,
+      "expected_checksum": "21e5e370e3e1c0e396f65d19925e851e540ca17e70d4236763326def714251cf",
+      "actual_checksum": "21e5e370e3e1c0e396f65d19925e851e540ca17e70d4236763326def714251cf",
+      "status": "PASS"
+    },
+    "GATE_6_SHARD_INTEGRITY": {
+      "passed": true,
+      "verified_shards_count": 6,
+      "status": "PASS"
+    },
+    "GATE_7_MANIFEST_INTEGRITY": {
+      "passed": true,
+      "manifest_files_count": 1,
+      "status": "PASS"
+    },
+    "GATE_8_PROVENANCE": {
+      "passed": true,
+      "policy": "Every accepted document contains cryptographic SHA-256 and source identifier",
+      "status": "PASS"
+    },
+    "GATE_9_LICENSE_POLICY": {
+      "passed": true,
+      "allowed_licenses": [
+        "MIT",
+        "BSD-2-Clause",
+        "BSD-3-Clause",
+        "Apache-2.0",
+        "CC-BY-4.0",
+        "ODC-By-1.0",
+        "CC0-1.0",
+        "ODC-By",
+        "Open-Data-Commons-Attribution"
+      ],
+      "violations_count": 0,
+      "status": "PASS"
+    },
+    "GATE_10_RESUMABILITY": {
+      "passed": true,
+      "policy": "Deterministic checkpoint restoration with zero dropped or duplicated records",
+      "status": "PASS"
+    },
+    "GATE_11_DATA_ACCOUNTING": {
+      "passed": true,
+      "reconciliation": "Source records == Retained + Rejected + ExactDuplicates + NearDuplicates",
+      "status": "PASS"
+    },
+    "GATE_12_CONTAMINATION_LEAKAGE": {
+      "passed": true,
+      "policy": "Automated 13-gram scanning for benchmark entities and held-out test suites",
+      "status": "PASS"
+    },
+    "GATE_13_CREDENTIAL_SAFETY": {
+      "passed": true,
+      "policy": "CodeSafetyScanner active with zero credential or private-key leaks accepted",
+      "status": "PASS"
+    },
+    "GATE_14_SOURCE_APPROVAL": {
+      "passed": true,
+      "policy": "All active production sources must have verified on-disk evidence dossiers (APPROVED)",
+      "status": "PASS"
+    }
+  },
+  "production_data_status": "NO-GO",
+  "final_verdicts": {
+    "PIPELINE_SOFTWARE": "GO",
+    "PRODUCTION_ACQUISITION_LAUNCHER": "GO",
+    "CURRENT_DATASET": "NO-GO",
+    "200B_TOKEN_TARGET": "NOT AVAILABLE",
+    "PRODUCTION_TRAINING": "NO-GO"
+  }
+}

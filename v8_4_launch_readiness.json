@@ -1,0 +1,151 @@
+{
+  "timestamp": "2026-09-06T19:45:00Z",
+  "milestone": "NIRMAL-1 V8.4",
+  "joint_verdict": "NO-GO",
+  "data_ready": false,
+  "hardware_ready": false,
+  "all_blockers": [
+    "Token deficit: 199,999,766,003 tokens missing (staged: 233,997 / required: 200,000,000,000)",
+    "CUDA acceleration is UNAVAILABLE on the local host (CPU execution only).",
+    "GPU count (0) is below minimum requirement of 8x H100 80GB GPUs.",
+    "Total VRAM (0.0 GB) is below minimum cluster requirement of 640.0 GB."
+  ],
+  "data_summary": {
+    "local_verified_tokens": 233997,
+    "remote_verified_tokens": 0,
+    "planned_tokens": 200000000000,
+    "token_deficit": 199999766003,
+    "completion_pct": 0.000117,
+    "total_documents": 737,
+    "total_shards": 6
+  },
+  "hardware_summary": {
+    "os": "Windows",
+    "cuda_available": false,
+    "gpu_count": 0,
+    "total_vram_gb": 0.0
+  },
+  "cluster_cost_projections": [
+    {
+      "topology_name": "8x H100 (Single Node)",
+      "num_gpus": 8,
+      "target_tokens": 200000000000,
+      "total_model_parameters": 25910000000,
+      "active_parameters_per_token": 4240000000,
+      "effective_mfu_pct": 38.4,
+      "throughput_tokens_per_sec": 119426.4,
+      "total_training_seconds": 1674671.4,
+      "total_training_hours": 465.19,
+      "total_training_days": 19.38,
+      "total_gpu_hours": 3721.49,
+      "compute_cost_usd": 11164.48,
+      "storage_and_egress_cost_usd": 850.0,
+      "total_projected_cost_usd": 12014.48,
+      "total_energy_kwh": 3349.3,
+      "provenance_labels": {
+        "h100_peak_flops": "ASSUMED (NVIDIA H100 SXM5 Whitepaper: 989 TFLOPS BF16)",
+        "mfu": "ESTIMATED (40.0% standard MoE / GQA pipeline target)",
+        "scaling_efficiency": "ESTIMATED (96.0% based on NVLink/InfiniBand network topology)",
+        "cost_rate": "ASSUMED ($3.00/GPU-hr based on current cloud spot/reserved averages)",
+        "local_hardware": "MEASURED (Host inspection independent of cloud simulation)"
+      }
+    },
+    {
+      "topology_name": "16x H100 (2 Nodes)",
+      "num_gpus": 16,
+      "target_tokens": 200000000000,
+      "total_model_parameters": 25910000000,
+      "active_parameters_per_token": 4240000000,
+      "effective_mfu_pct": 36.8,
+      "throughput_tokens_per_sec": 228900.6,
+      "total_training_seconds": 873741.6,
+      "total_training_hours": 242.71,
+      "total_training_days": 10.11,
+      "total_gpu_hours": 3883.3,
+      "compute_cost_usd": 11649.89,
+      "storage_and_egress_cost_usd": 850.0,
+      "total_projected_cost_usd": 12499.89,
+      "total_energy_kwh": 3495.0,
+      "provenance_labels": {
+        "h100_peak_flops": "ASSUMED (NVIDIA H100 SXM5 Whitepaper: 989 TFLOPS BF16)",
+        "mfu": "ESTIMATED (40.0% standard MoE / GQA pipeline target)",
+        "scaling_efficiency": "ESTIMATED (92.0% based on NVLink/InfiniBand network topology)",
+        "cost_rate": "ASSUMED ($3.00/GPU-hr based on current cloud spot/reserved averages)",
+        "local_hardware": "MEASURED (Host inspection independent of cloud simulation)"
+      }
+    },
+    {
+      "topology_name": "64x H100 (8 Nodes - Recommended)",
+      "num_gpus": 64,
+      "target_tokens": 200000000000,
+      "total_model_parameters": 25910000000,
+      "active_parameters_per_token": 4240000000,
+      "effective_mfu_pct": 35.2,
+      "throughput_tokens_per_sec": 875793.7,
+      "total_training_seconds": 228364.3,
+      "total_training_hours": 63.43,
+      "total_training_days": 2.64,
+      "total_gpu_hours": 4059.81,
+      "compute_cost_usd": 12179.43,
+      "storage_and_egress_cost_usd": 850.0,
+      "total_projected_cost_usd": 13029.43,
+      "total_energy_kwh": 3653.8,
+      "provenance_labels": {
+        "h100_peak_flops": "ASSUMED (NVIDIA H100 SXM5 Whitepaper: 989 TFLOPS BF16)",
+        "mfu": "ESTIMATED (40.0% standard MoE / GQA pipeline target)",
+        "scaling_efficiency": "ESTIMATED (88.0% based on NVLink/InfiniBand network topology)",
+        "cost_rate": "ASSUMED ($3.00/GPU-hr based on current cloud spot/reserved averages)",
+        "local_hardware": "MEASURED (Host inspection independent of cloud simulation)"
+      }
+    },
+    {
+      "topology_name": "128x H100 (16 Nodes)",
+      "num_gpus": 128,
+      "target_tokens": 200000000000,
+      "total_model_parameters": 25910000000,
+      "active_parameters_per_token": 4240000000,
+      "effective_mfu_pct": 34.0,
+      "throughput_tokens_per_sec": 1691874.2,
+      "total_training_seconds": 118212.1,
+      "total_training_hours": 32.84,
+      "total_training_days": 1.37,
+      "total_gpu_hours": 4203.1,
+      "compute_cost_usd": 12609.29,
+      "storage_and_egress_cost_usd": 850.0,
+      "total_projected_cost_usd": 13459.29,
+      "total_energy_kwh": 3782.8,
+      "provenance_labels": {
+        "h100_peak_flops": "ASSUMED (NVIDIA H100 SXM5 Whitepaper: 989 TFLOPS BF16)",
+        "mfu": "ESTIMATED (40.0% standard MoE / GQA pipeline target)",
+        "scaling_efficiency": "ESTIMATED (85.0% based on NVLink/InfiniBand network topology)",
+        "cost_rate": "ASSUMED ($3.00/GPU-hr based on current cloud spot/reserved averages)",
+        "local_hardware": "MEASURED (Host inspection independent of cloud simulation)"
+      }
+    },
+    {
+      "topology_name": "256x H100 (32 Nodes - Fast Scale)",
+      "num_gpus": 256,
+      "target_tokens": 200000000000,
+      "total_model_parameters": 25910000000,
+      "active_parameters_per_token": 4240000000,
+      "effective_mfu_pct": 32.8,
+      "throughput_tokens_per_sec": 3264322.0,
+      "total_training_seconds": 61268.5,
+      "total_training_hours": 17.02,
+      "total_training_days": 0.71,
+      "total_gpu_hours": 4356.87,
+      "compute_cost_usd": 13070.61,
+      "storage_and_egress_cost_usd": 850.0,
+      "total_projected_cost_usd": 13920.61,
+      "total_energy_kwh": 3921.2,
+      "provenance_labels": {
+        "h100_peak_flops": "ASSUMED (NVIDIA H100 SXM5 Whitepaper: 989 TFLOPS BF16)",
+        "mfu": "ESTIMATED (40.0% standard MoE / GQA pipeline target)",
+        "scaling_efficiency": "ESTIMATED (82.0% based on NVLink/InfiniBand network topology)",
+        "cost_rate": "ASSUMED ($3.00/GPU-hr based on current cloud spot/reserved averages)",
+        "local_hardware": "MEASURED (Host inspection independent of cloud simulation)"
+      }
+    }
+  ],
+  "policy": "Launch is PROHIBITED unless BOTH data_ready=True and hardware_ready=True."
+}

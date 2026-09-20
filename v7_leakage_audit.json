@@ -1,0 +1,51 @@
+{
+  "status": "PASSED",
+  "dataset_statistics": {
+    "total_examples": 990,
+    "train_examples": 660,
+    "val_examples": 165,
+    "test_examples": 165,
+    "split_ratios": "80% / 10% / 10%",
+    "num_domains": 11,
+    "domains": [
+      "1_natural_language",
+      "2_code",
+      "3_mathematics",
+      "4_logic",
+      "5_structured_reasoning",
+      "6_planning",
+      "7_tool_use",
+      "8_state_transitions",
+      "9_causal_reasoning",
+      "10_instruction_following",
+      "11_error_correction"
+    ]
+  },
+  "internal_deduplication": {
+    "train_duplicates": 0,
+    "train_duplicate_rate": 0.0,
+    "val_duplicates": 0,
+    "val_duplicate_rate": 0.0,
+    "test_duplicates": 0,
+    "test_duplicate_rate": 0.0
+  },
+  "split_isolation": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "is_strictly_isolated": true
+  },
+  "ngram_overlap": {
+    "window_size": 15,
+    "train_val_ngram_overlap": 30,
+    "train_test_ngram_overlap": 30
+  },
+  "entity_disjointness": {
+    "total_train_entities": 196,
+    "total_test_entities": 61,
+    "entity_collisions": 0
+  },
+  "active_guardrail_test": {
+    "injected_leakage_caught": true
+  }
+}

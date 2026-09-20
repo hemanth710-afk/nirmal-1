@@ -1,0 +1,127 @@
+{
+  "milestone": "NIRMAL-1 V8.1: SERIALIZED ARTIFACT AUDIT",
+  "candidate_name": "Candidate C (Hybrid DeltaNet + GQA + Sparse MoE)",
+  "exact_parameter_breakdown": {
+    "vocab_size": 32000,
+    "hidden_size": 4096,
+    "num_layers": 12,
+    "gqa_layers_count": 3,
+    "deltanet_layers_count": 9,
+    "embedding_params": 131072000,
+    "gqa_attention_params": 125829120,
+    "deltanet_params": 756155808,
+    "norm_params": 102400,
+    "moe_router_params": 786432,
+    "moe_expert_params": 24763170816,
+    "lm_head_params": 131072000,
+    "total_parameters": 25908188576,
+    "active_parameters": 4240414112,
+    "active_fraction": 0.1637
+  },
+  "precision_artifacts": {
+    "BF16": {
+      "bytes_per_param": 2.0,
+      "raw_weight_bytes": 51816377152,
+      "metadata_header_bytes": 16777216,
+      "tensor_alignment_bytes": 32768,
+      "sharding_manifest_bytes": 33554432,
+      "total_artifact_bytes": 51866741568,
+      "artifact_size_gb": 48.3047,
+      "is_within_45_50_gb_bounds": true,
+      "headroom_to_50gb_mb": 1736.02
+    },
+    "FP16": {
+      "bytes_per_param": 2.0,
+      "raw_weight_bytes": 51816377152,
+      "metadata_header_bytes": 16777216,
+      "tensor_alignment_bytes": 32768,
+      "sharding_manifest_bytes": 33554432,
+      "total_artifact_bytes": 51866741568,
+      "artifact_size_gb": 48.3047,
+      "is_within_45_50_gb_bounds": true,
+      "headroom_to_50gb_mb": 1736.02
+    },
+    "INT8": {
+      "bytes_per_param": 1.0,
+      "raw_weight_bytes": 25908188576,
+      "metadata_header_bytes": 16777216,
+      "tensor_alignment_bytes": 32768,
+      "sharding_manifest_bytes": 33554432,
+      "total_artifact_bytes": 25958552992,
+      "artifact_size_gb": 24.1758,
+      "is_within_45_50_gb_bounds": false,
+      "headroom_to_50gb_mb": 26443.99
+    },
+    "INT4": {
+      "bytes_per_param": 0.5,
+      "raw_weight_bytes": 12954094288,
+      "metadata_header_bytes": 16777216,
+      "tensor_alignment_bytes": 32768,
+      "sharding_manifest_bytes": 33554432,
+      "total_artifact_bytes": 13004458704,
+      "artifact_size_gb": 12.1113,
+      "is_within_45_50_gb_bounds": false,
+      "headroom_to_50gb_mb": 38797.98
+    }
+  },
+  "sharding_manifest": {
+    "num_shards": 5,
+    "target_shard_size_gb": 9.66,
+    "shards": [
+      {
+        "shard_id": "model-00001-of-00005.safetensors",
+        "approx_size_gb": 9.66,
+        "layers": "layers_0_to_2"
+      },
+      {
+        "shard_id": "model-00002-of-00005.safetensors",
+        "approx_size_gb": 9.66,
+        "layers": "layers_2_to_4"
+      },
+      {
+        "shard_id": "model-00003-of-00005.safetensors",
+        "approx_size_gb": 9.66,
+        "layers": "layers_4_to_6"
+      },
+      {
+        "shard_id": "model-00004-of-00005.safetensors",
+        "approx_size_gb": 9.66,
+        "layers": "layers_6_to_8"
+      },
+      {
+        "shard_id": "model-00005-of-00005.safetensors",
+        "approx_size_gb": 9.66,
+        "layers": "layers_8_to_10"
+      }
+    ]
+  },
+  "discrepancy_verifications": [
+    {
+      "config_name": "Mini-1",
+      "actual_pytorch": 773796,
+      "formula_calculated": 773796,
+      "discrepancy": 0,
+      "pass": true
+    },
+    {
+      "config_name": "Mini-2",
+      "actual_pytorch": 10077644,
+      "formula_calculated": 10077644,
+      "discrepancy": 0,
+      "pass": true
+    },
+    {
+      "config_name": "Mini-3",
+      "actual_pytorch": 43311832,
+      "formula_calculated": 43311832,
+      "discrepancy": 0,
+      "pass": true
+    }
+  ],
+  "size_invariant_status": {
+    "min_bound_gb": 45.0,
+    "max_bound_gb": 50.0,
+    "actual_bf16_gb": 48.3047,
+    "passed": true
+  }
+}

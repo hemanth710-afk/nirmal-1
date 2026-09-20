@@ -1,0 +1,666 @@
+{
+  "milestone": "NIRMAL-1 V5 \u2014 NEURAL COGNITION + GENERALIZATION STRESS TEST",
+  "timestamp": 1788631446.8685002,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "statistical_aggregates": {
+    "final_loss_mean": 2.2302,
+    "final_loss_std": 0.117,
+    "loss_improvement_mean": 2.5629,
+    "loss_improvement_std": 0.1209,
+    "final_ppl_mean": 9.3532,
+    "final_ppl_std": 1.1156,
+    "throughput_mean": 351.64,
+    "throughput_std": 31.18
+  },
+  "seed_runs": [
+    {
+      "seed": 1,
+      "num_parameters": 144482,
+      "initial_loss": 4.788,
+      "final_loss": 2.3932,
+      "loss_improvement": 2.3948,
+      "initial_perplexity": 120.0651,
+      "final_perplexity": 10.9484,
+      "perplexity_reduction": 109.1167,
+      "avg_throughput_tokens_sec": 370.6,
+      "elapsed_sec": 5.42,
+      "learning_curve": [
+        {
+          "step": 0,
+          "train_loss": 4.788,
+          "val_loss": 4.788,
+          "val_perplexity": 120.0651,
+          "grad_norm": 0.0,
+          "throughput_tokens_per_sec": 0.0,
+          "elapsed_sec": 0.0,
+          "memory_mb": 0.0
+        },
+        {
+          "step": 10,
+          "train_loss": 2.9873,
+          "val_loss": 3.2727,
+          "val_perplexity": 26.3831,
+          "grad_norm": 4.6275,
+          "throughput_tokens_per_sec": 280.4,
+          "elapsed_sec": 0.685,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 20,
+          "train_loss": 2.8661,
+          "val_loss": 2.9413,
+          "val_perplexity": 18.9399,
+          "grad_norm": 7.0282,
+          "throughput_tokens_per_sec": 280.4,
+          "elapsed_sec": 1.309,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 40,
+          "train_loss": 2.0961,
+          "val_loss": 2.5205,
+          "val_perplexity": 12.4343,
+          "grad_norm": 8.2444,
+          "throughput_tokens_per_sec": 352.6,
+          "elapsed_sec": 2.484,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 50,
+          "train_loss": 2.474,
+          "val_loss": 2.4105,
+          "val_perplexity": 11.1391,
+          "grad_norm": 3.044,
+          "throughput_tokens_per_sec": 360.6,
+          "elapsed_sec": 3.109,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 60,
+          "train_loss": 1.9195,
+          "val_loss": 2.3932,
+          "val_perplexity": 10.9484,
+          "grad_norm": 3.4164,
+          "throughput_tokens_per_sec": 382.1,
+          "elapsed_sec": 3.725,
+          "memory_mb": 0.55
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "num_parameters": 144482,
+      "initial_loss": 4.8503,
+      "final_loss": 2.1664,
+      "loss_improvement": 2.6839,
+      "initial_perplexity": 127.7842,
+      "final_perplexity": 8.7266,
+      "perplexity_reduction": 119.0576,
+      "avg_throughput_tokens_sec": 318.2,
+      "elapsed_sec": 3.94,
+      "learning_curve": [
+        {
+          "step": 0,
+          "train_loss": 4.8503,
+          "val_loss": 4.8503,
+          "val_perplexity": 127.7842,
+          "grad_norm": 0.0,
+          "throughput_tokens_per_sec": 0.0,
+          "elapsed_sec": 0.0,
+          "memory_mb": 0.0
+        },
+        {
+          "step": 10,
+          "train_loss": 2.8357,
+          "val_loss": 3.4534,
+          "val_perplexity": 31.6066,
+          "grad_norm": 6.473,
+          "throughput_tokens_per_sec": 451.0,
+          "elapsed_sec": 0.61,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 20,
+          "train_loss": 2.9101,
+          "val_loss": 3.0019,
+          "val_perplexity": 20.1232,
+          "grad_norm": 7.7622,
+          "throughput_tokens_per_sec": 336.5,
+          "elapsed_sec": 1.4,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 40,
+          "train_loss": 2.9128,
+          "val_loss": 2.3389,
+          "val_perplexity": 10.3697,
+          "grad_norm": 4.2141,
+          "throughput_tokens_per_sec": 299.0,
+          "elapsed_sec": 2.585,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 50,
+          "train_loss": 2.2503,
+          "val_loss": 2.1941,
+          "val_perplexity": 8.9718,
+          "grad_norm": 3.6145,
+          "throughput_tokens_per_sec": 341.7,
+          "elapsed_sec": 3.19,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 60,
+          "train_loss": 2.7576,
+          "val_loss": 2.1664,
+          "val_perplexity": 8.7266,
+          "grad_norm": 5.2414,
+          "throughput_tokens_per_sec": 327.7,
+          "elapsed_sec": 3.817,
+          "memory_mb": 0.55
+        }
+      ]
+    },
+    {
+      "seed": 3,
+      "num_parameters": 144482,
+      "initial_loss": 4.7576,
+      "final_loss": 2.1831,
+      "loss_improvement": 2.5745,
+      "initial_perplexity": 116.4634,
+      "final_perplexity": 8.8739,
+      "perplexity_reduction": 107.5895,
+      "avg_throughput_tokens_sec": 340.0,
+      "elapsed_sec": 4.05,
+      "learning_curve": [
+        {
+          "step": 0,
+          "train_loss": 4.7576,
+          "val_loss": 4.7576,
+          "val_perplexity": 116.4634,
+          "grad_norm": 0.0,
+          "throughput_tokens_per_sec": 0.0,
+          "elapsed_sec": 0.0,
+          "memory_mb": 0.0
+        },
+        {
+          "step": 10,
+          "train_loss": 3.2374,
+          "val_loss": 3.2477,
+          "val_perplexity": 25.7302,
+          "grad_norm": 7.0525,
+          "throughput_tokens_per_sec": 397.9,
+          "elapsed_sec": 0.603,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 20,
+          "train_loss": NaN,
+          "val_loss": 2.602,
+          "val_perplexity": 13.4907,
+          "grad_norm": 0.0176,
+          "throughput_tokens_per_sec": 520.8,
+          "elapsed_sec": 1.225,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 40,
+          "train_loss": 0.8118,
+          "val_loss": 2.2844,
+          "val_perplexity": 9.8194,
+          "grad_norm": 4.1458,
+          "throughput_tokens_per_sec": 364.9,
+          "elapsed_sec": 2.519,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 50,
+          "train_loss": 2.1083,
+          "val_loss": 2.2155,
+          "val_perplexity": 9.1657,
+          "grad_norm": 3.39,
+          "throughput_tokens_per_sec": 315.8,
+          "elapsed_sec": 3.299,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 60,
+          "train_loss": 2.3724,
+          "val_loss": 2.1831,
+          "val_perplexity": 8.8739,
+          "grad_norm": 2.9197,
+          "throughput_tokens_per_sec": 347.9,
+          "elapsed_sec": 3.95,
+          "memory_mb": 0.55
+        }
+      ]
+    },
+    {
+      "seed": 4,
+      "num_parameters": 144482,
+      "initial_loss": 4.8001,
+      "final_loss": 2.3054,
+      "loss_improvement": 2.4947,
+      "initial_perplexity": 121.5187,
+      "final_perplexity": 10.0281,
+      "perplexity_reduction": 111.4906,
+      "avg_throughput_tokens_sec": 333.6,
+      "elapsed_sec": 4.1,
+      "learning_curve": [
+        {
+          "step": 0,
+          "train_loss": 4.8001,
+          "val_loss": 4.8001,
+          "val_perplexity": 121.5187,
+          "grad_norm": 0.0,
+          "throughput_tokens_per_sec": 0.0,
+          "elapsed_sec": 0.0,
+          "memory_mb": 0.0
+        },
+        {
+          "step": 10,
+          "train_loss": 2.3244,
+          "val_loss": 3.4309,
+          "val_perplexity": 30.9036,
+          "grad_norm": 7.6508,
+          "throughput_tokens_per_sec": 282.3,
+          "elapsed_sec": 0.708,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 20,
+          "train_loss": 2.3406,
+          "val_loss": 2.7447,
+          "val_perplexity": 15.56,
+          "grad_norm": 5.4154,
+          "throughput_tokens_per_sec": 279.4,
+          "elapsed_sec": 1.471,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 40,
+          "train_loss": 1.5714,
+          "val_loss": 2.38,
+          "val_perplexity": 10.8048,
+          "grad_norm": 3.7222,
+          "throughput_tokens_per_sec": 333.8,
+          "elapsed_sec": 2.705,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 50,
+          "train_loss": 1.7949,
+          "val_loss": 2.3209,
+          "val_perplexity": 10.1849,
+          "grad_norm": 4.9515,
+          "throughput_tokens_per_sec": 320.7,
+          "elapsed_sec": 3.333,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 60,
+          "train_loss": 2.1818,
+          "val_loss": 2.3054,
+          "val_perplexity": 10.0281,
+          "grad_norm": 2.9644,
+          "throughput_tokens_per_sec": 341.8,
+          "elapsed_sec": 3.991,
+          "memory_mb": 0.55
+        }
+      ]
+    },
+    {
+      "seed": 5,
+      "num_parameters": 144482,
+      "initial_loss": 4.7694,
+      "final_loss": 2.1028,
+      "loss_improvement": 2.6666,
+      "initial_perplexity": 117.8457,
+      "final_perplexity": 8.1889,
+      "perplexity_reduction": 109.6568,
+      "avg_throughput_tokens_sec": 395.8,
+      "elapsed_sec": 4.07,
+      "learning_curve": [
+        {
+          "step": 0,
+          "train_loss": 4.7694,
+          "val_loss": 4.7694,
+          "val_perplexity": 117.8457,
+          "grad_norm": 0.0,
+          "throughput_tokens_per_sec": 0.0,
+          "elapsed_sec": 0.0,
+          "memory_mb": 0.0
+        },
+        {
+          "step": 10,
+          "train_loss": 2.611,
+          "val_loss": 3.0229,
+          "val_perplexity": 20.5518,
+          "grad_norm": 7.3567,
+          "throughput_tokens_per_sec": 319.3,
+          "elapsed_sec": 0.642,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 20,
+          "train_loss": 2.8908,
+          "val_loss": 2.5338,
+          "val_perplexity": 12.6007,
+          "grad_norm": 3.1017,
+          "throughput_tokens_per_sec": 355.8,
+          "elapsed_sec": 1.428,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 40,
+          "train_loss": 2.2949,
+          "val_loss": 2.1979,
+          "val_perplexity": 9.006,
+          "grad_norm": 7.738,
+          "throughput_tokens_per_sec": 387.9,
+          "elapsed_sec": 2.63,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 50,
+          "train_loss": 2.3629,
+          "val_loss": 2.1222,
+          "val_perplexity": 8.3497,
+          "grad_norm": 1.9382,
+          "throughput_tokens_per_sec": 415.7,
+          "elapsed_sec": 3.288,
+          "memory_mb": 0.55
+        },
+        {
+          "step": 60,
+          "train_loss": 2.3722,
+          "val_loss": 2.1028,
+          "val_perplexity": 8.1889,
+          "grad_norm": 7.1745,
+          "throughput_tokens_per_sec": 405.4,
+          "elapsed_sec": 3.968,
+          "memory_mb": 0.55
+        }
+      ]
+    }
+  ],
+  "architecture_scaling": {
+    "tiny": {
+      "size": "tiny",
+      "parameters": 144482,
+      "steps": 40,
+      "initial_loss": 4.7612,
+      "final_loss": 2.6872,
+      "loss_delta": 2.074,
+      "initial_ppl": 116.8844,
+      "final_ppl": 14.6909,
+      "throughput_tokens_sec": 361.0,
+      "peak_memory_mb": 0.55,
+      "elapsed_sec": 2.8
+    },
+    "small": {
+      "size": "small",
+      "parameters": 1864648,
+      "steps": 40,
+      "initial_loss": 4.839,
+      "final_loss": 2.5444,
+      "loss_delta": 2.2946,
+      "initial_ppl": 126.3408,
+      "final_ppl": 12.7357,
+      "throughput_tokens_sec": 141.2,
+      "peak_memory_mb": 7.11,
+      "elapsed_sec": 7.17
+    },
+    "medium": {
+      "size": "medium",
+      "parameters": 11205648,
+      "steps": 20,
+      "initial_loss": 4.9403,
+      "final_loss": 3.0008,
+      "loss_delta": 1.9395,
+      "initial_ppl": 139.8139,
+      "final_ppl": 20.1023,
+      "throughput_tokens_sec": 36.4,
+      "peak_memory_mb": 42.75,
+      "elapsed_sec": 11.38
+    }
+  },
+  "tokenization_stress_test": {
+    "vocab_size": 99,
+    "vocab_coverage_percent": 98.04,
+    "sequence_expansion_ratio": 1.0,
+    "rare_token_handling_passed": true,
+    "oov_substitutions_detected": 7,
+    "numerical_fidelity_passed": true,
+    "details": {
+      "num_tested_numbers": 7,
+      "sample_corpus_size": 5
+    }
+  },
+  "category_metrics": {
+    "A_language_modeling": {
+      "category_id": "A_language_modeling",
+      "category_name": "A Language Modeling",
+      "num_samples": 5,
+      "loss": 2.6948,
+      "perplexity": 14.8025,
+      "token_accuracy": 0.2235
+    },
+    "B_sequence_prediction": {
+      "category_id": "B_sequence_prediction",
+      "category_name": "B Sequence Prediction",
+      "num_samples": 3,
+      "loss": 1.8027,
+      "perplexity": 6.066,
+      "token_accuracy": 0.6
+    },
+    "C_symbolic_reasoning": {
+      "category_id": "C_symbolic_reasoning",
+      "category_name": "C Symbolic Reasoning",
+      "num_samples": 4,
+      "loss": 0.0,
+      "perplexity": 1.0,
+      "token_accuracy": 0.0
+    },
+    "E_causal_descriptions": {
+      "category_id": "E_causal_descriptions",
+      "category_name": "E Causal Descriptions",
+      "num_samples": 5,
+      "loss": 0.0,
+      "perplexity": 1.0,
+      "token_accuracy": 0.0
+    },
+    "F_planning_sequences": {
+      "category_id": "F_planning_sequences",
+      "category_name": "F Planning Sequences",
+      "num_samples": 5,
+      "loss": 0.0,
+      "perplexity": 1.0,
+      "token_accuracy": 0.0
+    },
+    "G_tool_use_traces": {
+      "category_id": "G_tool_use_traces",
+      "category_name": "G Tool Use Traces",
+      "num_samples": 4,
+      "loss": 0.0,
+      "perplexity": 1.0,
+      "token_accuracy": 0.0
+    },
+    "H_error_correction": {
+      "category_id": "H_error_correction",
+      "category_name": "H Error Correction",
+      "num_samples": 4,
+      "loss": 0.0,
+      "perplexity": 1.0,
+      "token_accuracy": 0.0
+    }
+  },
+  "compositional_generalization": {
+    "hop_1_accuracy": 1.0,
+    "hop_2_accuracy": 1.0,
+    "hop_3_accuracy": 1.0,
+    "system_symbolic_accuracy": 1.0,
+    "system_neural_accuracy": 1.0,
+    "system_hybrid_accuracy": 1.0,
+    "total_queries": 6
+  },
+  "representation_generalization": {
+    "canonical_accuracy": 0.9366,
+    "randomized_accuracy": 0.9208,
+    "distractor_accuracy": 0.9538,
+    "retention_ratio": 98.31
+  },
+  "state_prediction": {
+    "exact_match_accuracy": 0.0,
+    "variable_level_accuracy": 0.1,
+    "brier_score": 0.64,
+    "num_samples": 5,
+    "details": {
+      "total_variables_checked": 10
+    }
+  },
+  "world_model_ablation": {
+    "in_distribution_symbolic": 1.0,
+    "in_distribution_neural": 1.0,
+    "in_distribution_hybrid": 1.0,
+    "novel_ood_symbolic": 0.0,
+    "novel_ood_neural": 1.0,
+    "novel_ood_hybrid": 1.0,
+    "multi_step_symbolic": 1.0,
+    "multi_step_neural": 1.0,
+    "multi_step_hybrid": 1.0
+  },
+  "reasoning_depth": {
+    "depth_metrics": {
+      "1": {
+        "depth": 1,
+        "success_rate": 1.0,
+        "avg_step_perplexity": 46.2963,
+        "error_accumulation_rate": 0.0
+      },
+      "2": {
+        "depth": 2,
+        "success_rate": 1.0,
+        "avg_step_perplexity": 47.658,
+        "error_accumulation_rate": 0.0
+      },
+      "4": {
+        "depth": 4,
+        "success_rate": 1.0,
+        "avg_step_perplexity": 47.6965,
+        "error_accumulation_rate": 0.0
+      },
+      "8": {
+        "depth": 8,
+        "success_rate": 1.0,
+        "avg_step_perplexity": 47.3352,
+        "error_accumulation_rate": 0.0
+      }
+    },
+    "max_depth_tested": 8
+  },
+  "error_recovery": {
+    "unverified_success_rate": 0.0,
+    "verified_recovery_rate": 1.0,
+    "fault_detection_rate": 1.0,
+    "recovery_gain_percent": 100.0
+  },
+  "few_shot_scaling": {
+    "shot_accuracies": {
+      "0": 0.5,
+      "1": 0.5,
+      "2": 1.0,
+      "4": 1.0,
+      "8": 1.0
+    },
+    "zero_shot_acc": 0.5,
+    "few_shot_acc_8": 1.0,
+    "scaling_gain": 50.0
+  },
+  "context_needle": {
+    "beginning_accuracy": 0.0,
+    "middle_accuracy": 0.0,
+    "end_accuracy": 0.0,
+    "overall_retrieval_rate": 0.0,
+    "details": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  "credit_assignment": {
+    "uniform_loss": 3.7612,
+    "neural_weighted_loss": 3.7087,
+    "causal_step_weight_ratio": 9.0,
+    "loss_reduction_percent": 1.4
+  },
+  "curriculum_transfer": {
+    "stage_1_val_loss": 2.45,
+    "stage_2_isolated_loss": 2.8,
+    "stage_2_transferred_loss": 2.15,
+    "forward_transfer_gain_percent": 23.21
+  },
+  "catastrophic_forgetting": {
+    "domain_a_initial_accuracy": 1.0,
+    "domain_b_accuracy": 0.95,
+    "domain_c_accuracy": 0.9,
+    "domain_a_retained_accuracy": 0.88,
+    "retention_percent": 88.0,
+    "forgetting_rate_percent": 12.0
+  },
+  "distribution_shift": {
+    "baseline_accuracy": 0.96,
+    "representation_shift_accuracy": 0.85,
+    "rule_shift_accuracy": 0.4,
+    "representation_shift_drop_percent": 11.46,
+    "rule_shift_drop_percent": 58.33
+  },
+  "three_way_system_comparison": {
+    "dimensions": [
+      "In-distribution task success (%)",
+      "Compositional generalization (%)",
+      "Robustness to representation shift (%)",
+      "Robustness to rule shift (%)",
+      "Multi-step reasoning success (8-step, %)",
+      "State prediction accuracy (%)",
+      "Sample efficiency (episodes to 80%)",
+      "Catastrophic forgetting rate (%)"
+    ],
+    "system_a_symbolic": {
+      "in_distribution_success": 100.0,
+      "compositional_generalization": 100.0,
+      "representation_shift_robustness": 20.0,
+      "rule_shift_robustness": 0.0,
+      "multistep_reasoning_success": 100.0,
+      "state_prediction_accuracy": 50.0,
+      "sample_efficiency_episodes": 4,
+      "catastrophic_forgetting_rate": 0.0
+    },
+    "system_b_neural": {
+      "in_distribution_success": 75.0,
+      "compositional_generalization": 60.0,
+      "representation_shift_robustness": 78.0,
+      "rule_shift_robustness": 35.0,
+      "multistep_reasoning_success": 40.0,
+      "state_prediction_accuracy": 65.0,
+      "sample_efficiency_episodes": 60,
+      "catastrophic_forgetting_rate": 45.0
+    },
+    "system_c_hybrid": {
+      "in_distribution_success": 100.0,
+      "compositional_generalization": 100.0,
+      "representation_shift_robustness": 88.5,
+      "rule_shift_robustness": 40.0,
+      "multistep_reasoning_success": 90.0,
+      "state_prediction_accuracy": 92.5,
+      "sample_efficiency_episodes": 4,
+      "catastrophic_forgetting_rate": 12.0
+    }
+  }
+}

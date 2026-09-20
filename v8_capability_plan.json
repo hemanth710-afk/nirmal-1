@@ -1,0 +1,130 @@
+{
+  "milestone": "NIRMAL-1 V8: FROZEN CAPABILITY BENCHMARK & TRAIN PLAN",
+  "dryrun_status": "PASSED",
+  "dryrun_telemetry": [
+    {
+      "step": 1,
+      "loss": 12.0447,
+      "grad_norm": 14.7919,
+      "lr": 0.0002
+    },
+    {
+      "step": 2,
+      "loss": 10.2223,
+      "grad_norm": 8.2284,
+      "lr": 0.00035
+    },
+    {
+      "step": 3,
+      "loss": 9.8084,
+      "grad_norm": 8.8531,
+      "lr": 0.0005
+    },
+    {
+      "step": 4,
+      "loss": 8.6615,
+      "grad_norm": 6.494,
+      "lr": 0.000492
+    },
+    {
+      "step": 5,
+      "loss": 7.4922,
+      "grad_norm": 10.3828,
+      "lr": 0.00047
+    },
+    {
+      "step": 6,
+      "loss": 7.0055,
+      "grad_norm": 8.8318,
+      "lr": 0.000434
+    },
+    {
+      "step": 7,
+      "loss": 6.3919,
+      "grad_norm": 6.5782,
+      "lr": 0.000388
+    },
+    {
+      "step": 8,
+      "loss": 6.0648,
+      "grad_norm": 5.9273,
+      "lr": 0.000333
+    },
+    {
+      "step": 9,
+      "loss": 5.724,
+      "grad_norm": 6.5231,
+      "lr": 0.000275
+    },
+    {
+      "step": 10,
+      "loss": 4.8578,
+      "grad_norm": 5.7176,
+      "lr": 0.000217
+    }
+  ],
+  "loss_descent_verified": true,
+  "checkpoint_interruption_recovery_verified": true,
+  "capability_index_specification": {
+    "name": "PRELIMINARY NIRMAL AGI CAPABILITY INDEX",
+    "version": "v8.0_frozen",
+    "reference_baseline_score": 100.0,
+    "milestone_target": 110.0,
+    "num_categories": 12,
+    "categories": [
+      "Deductive Reasoning",
+      "Mathematical Problem Solving",
+      "Coding & Syntax Generation",
+      "Planning & Decomposition",
+      "Memory & Association",
+      "Tool Calling & Validation",
+      "Learning & Adaptation",
+      "Generalization (Structural Shift)",
+      "World Modeling (State Prediction)",
+      "Long-Context Needle Retrieval",
+      "Error Recovery & Correction",
+      "Continual Learning (Zero Forgetting)"
+    ],
+    "scoring_invariants": [
+      "Strict zero data leakage: Test sets generated independently with disjoint entities.",
+      "Zero evaluator heuristics, zero answer boosts, zero label injections.",
+      "Pure conditional log-likelihood scoring for neural-only evaluations.",
+      "Explicit separate reporting for Neural-Alone vs Hybrid (Neural + Symbolic)."
+    ]
+  },
+  "curriculum_strategy": {
+    "num_stages": 6,
+    "stages": [
+      {
+        "stage": 1,
+        "name": "General Language & World Knowledge",
+        "token_share_pct": 35.0
+      },
+      {
+        "stage": 2,
+        "name": "Code, Mathematics, & Structured Data",
+        "token_share_pct": 25.0
+      },
+      {
+        "stage": 3,
+        "name": "Logic & Multi-Step Reasoning",
+        "token_share_pct": 15.0
+      },
+      {
+        "stage": 4,
+        "name": "Planning & Sandboxed Tool Execution",
+        "token_share_pct": 10.0
+      },
+      {
+        "stage": 5,
+        "name": "Long-Context Needle & Synthesis (up to 8K)",
+        "token_share_pct": 5.0
+      },
+      {
+        "stage": 6,
+        "name": "Capability Annealing with 20% Replay Buffer",
+        "token_share_pct": 10.0
+      }
+    ]
+  }
+}

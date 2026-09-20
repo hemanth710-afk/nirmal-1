@@ -1,0 +1,358 @@
+{
+  "num_trials": 50,
+  "mean_observed_transition_accuracy": 1.0,
+  "mean_holdout_uncertainty": 0.8,
+  "active_experiment_selection_rate": 1.0,
+  "trials": [
+    {
+      "trial": 1,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 2,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 3,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 4,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 5,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 6,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 7,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 8,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 9,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 10,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 11,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 12,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 13,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 14,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 15,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 16,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 17,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 18,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 19,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 20,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 21,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 22,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 23,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 24,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 25,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 26,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 27,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 28,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 29,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 30,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 31,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 32,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 33,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 34,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 35,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 36,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 37,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 38,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 39,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 40,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 41,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 42,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 43,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 44,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 45,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 46,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 47,
+      "op": "xor",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 48,
+      "op": "or",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 49,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    },
+    {
+      "trial": 50,
+      "op": "and",
+      "observed_acc": 1.0,
+      "holdout_uncertainty": 0.8,
+      "active_exploration_chosen": true
+    }
+  ]
+}

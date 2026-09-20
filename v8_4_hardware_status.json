@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-09-06T19:42:00Z",
+  "verdict": "HARDWARE_NOT_READY",
+  "is_ready": false,
+  "measured_host_hardware": {
+    "os": "Windows",
+    "os_release": "11",
+    "architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "python_version": "3.13.1",
+    "cpu_logical_cores": 16,
+    "ram_gb": 15.69,
+    "torch_version": "2.14.0+cpu",
+    "cuda_available": false,
+    "gpu_count": 0,
+    "gpu_devices": [],
+    "total_vram_gb": 0.0
+  },
+  "production_requirements": {
+    "target_model": "Candidate C (DeltaNet + GQA + Sparse MoE)",
+    "total_parameters": "25.91B",
+    "active_parameters_per_token": "4.24B",
+    "minimum_cluster_spec": "8x H100 SXM5 80GB (640.0 GB VRAM)",
+    "recommended_cluster_spec": "64x H100 SXM5 80GB (5,120 GB VRAM)",
+    "interconnect_requirement": "InfiniBand NDR 400 Gbps / NVLink 4"
+  },
+  "comparison_checks": {
+    "cuda_support": "FAIL",
+    "gpu_count_check": "FAIL",
+    "vram_capacity_check": "FAIL"
+  },
+  "deficits_and_blockers": [
+    "CUDA acceleration is UNAVAILABLE on the local host (CPU execution only).",
+    "GPU count (0) is below minimum requirement of 8x H100 80GB GPUs.",
+    "Total VRAM (0.0 GB) is below minimum cluster requirement of 640.0 GB."
+  ],
+  "provenance": {
+    "host_metrics": "MEASURED (Live system inspection)",
+    "production_spec": "REQUIRED (Architectural requirement for 25.91B parameter training)"
+  }
+}

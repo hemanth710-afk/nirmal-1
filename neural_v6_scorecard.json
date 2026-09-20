@@ -1,0 +1,129 @@
+{
+  "timestamp_unix": 1788698544.0809405,
+  "milestone": "NIRMAL-1 V6",
+  "learning_gate_passed": false,
+  "clean_training_telemetry": {
+    "initial_val_loss": 4.9202,
+    "final_val_loss": 2.3987,
+    "loss_improvement": 2.5215,
+    "initial_perplexity": 137.02,
+    "final_perplexity": 11.01,
+    "perplexity_reduction": 126.01,
+    "average_throughput_tok_sec": 1558.6
+  },
+  "capabilities": {
+    "compositional_reasoning": {
+      "acc_2hop": 0.0,
+      "acc_3hop": 0.0,
+      "overall_compositional_acc": 0.0,
+      "total_evals": 8
+    },
+    "ood_generalization": {
+      "ood_accuracy": 0.3333,
+      "test_count": 3,
+      "symmetric_ground_truth_enforced": true
+    },
+    "few_shot_in_context": {
+      "shot_0": 1.0,
+      "shot_1": 1.0,
+      "shot_2": 1.0,
+      "shot_4": 1.0,
+      "shot_8": 1.0,
+      "shot_16": 1.0
+    },
+    "long_horizon_rollout": {
+      "horizon_1": 0.0,
+      "horizon_2": 0.0,
+      "horizon_4": 0.0,
+      "horizon_8": 0.0,
+      "horizon_16": 0.0,
+      "horizon_32": 0.0
+    },
+    "neural_world_model": {
+      "world_model_acc": 0.6667,
+      "test_count": 3
+    },
+    "causal_reasoning": {
+      "causal_accuracy": 0.5,
+      "test_count": 2
+    },
+    "memorization_audit": {
+      "adversarial_probe_1_passed": true,
+      "adversarial_probe_2_passed": false,
+      "memorization_resilience": 0.5
+    }
+  },
+  "eight_way_baselines": {
+    "1_random_baseline": {
+      "composition": 0.25,
+      "ood_generalization": 0.5,
+      "world_model": 0.5,
+      "causal": 0.5,
+      "mean": 0.4375
+    },
+    "2_majority_baseline": {
+      "composition": 0.25,
+      "ood_generalization": 0.5,
+      "world_model": 0.5,
+      "causal": 0.5,
+      "mean": 0.4375
+    },
+    "3_regex_template": {
+      "composition": 0.75,
+      "ood_generalization": 0.33,
+      "world_model": 0.67,
+      "causal": 0.5,
+      "mean": 0.5625
+    },
+    "4_classical_knn": {
+      "composition": 0.5,
+      "ood_generalization": 0.33,
+      "world_model": 0.67,
+      "causal": 0.5,
+      "mean": 0.5
+    },
+    "5_pure_symbolic": {
+      "composition": 1.0,
+      "ood_generalization": 0.33,
+      "world_model": 0.67,
+      "causal": 1.0,
+      "mean": 0.75
+    },
+    "6_untrained_neural": {
+      "composition": 0.0,
+      "ood_generalization": 0.3333,
+      "world_model": 0.6667,
+      "causal": 0.5,
+      "mean": 0.375
+    },
+    "7_trained_neural_v6": {
+      "composition": 0.0,
+      "ood_generalization": 0.3333,
+      "world_model": 0.6667,
+      "causal": 0.5,
+      "mean": 0.375
+    },
+    "8_full_nirmal_hybrid": {
+      "composition": 1.0,
+      "ood_generalization": 0.67,
+      "world_model": 1.0,
+      "causal": 1.0,
+      "mean": 0.9175
+    }
+  },
+  "tokenizer_comparison": {
+    "char_vocab_size": 99,
+    "subword_vocab_size": 150,
+    "char_tokens_per_char": 1.0,
+    "subword_tokens_per_char": 0.5453,
+    "compression_ratio": 1.834,
+    "numerical_fidelity_char": true,
+    "numerical_fidelity_subword": true,
+    "code_tokens_char": 93,
+    "code_tokens_subword": 85,
+    "multilingual_support_char": "ASCII-only (substitutes unicode with <unk>)",
+    "multilingual_support_subword": "ASCII + subword fragments (expandable byte fallback)",
+    "decision": "SubwordBPE Recommended for Scaling / CharTokenizer Maintained for Frozen Core Baseline",
+    "decision_rationale": "Subword BPE achieves 1.83x compression over character tokenization (0.545 vs 1.000 tokens/char). Both maintain 100% numerical fidelity. For V6 baseline experiments under frozen core architecture, character vocabulary (vocab_size=99) prevents vocabulary dimension mismatch in existing pretrained weights, while Subword BPE is validated as the primary tokenizer for future scaled architectures."
+  }
+}

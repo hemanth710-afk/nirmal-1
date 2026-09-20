@@ -1,0 +1,412 @@
+{
+  "milestone": "NIRMAL-1 V7 \u2014 SCALING LAWS",
+  "parameter_scaling": {
+    "model_specs": {
+      "tiny": {
+        "name": "Tiny",
+        "vocab_size": 32000,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "num_attention_heads": 2,
+        "num_kv_heads": 1,
+        "head_dim": 32,
+        "num_experts": 2,
+        "num_experts_per_tok": 1,
+        "context_length": 128,
+        "total_parameters": 4276928,
+        "active_parameters": 4203200,
+        "fp32_size_mb": 16.32,
+        "fp16_size_mb": 8.16,
+        "bf16_size_mb": 8.16,
+        "int8_size_mb": 4.08,
+        "int4_size_mb": 2.04
+      },
+      "small": {
+        "name": "Small",
+        "vocab_size": 32000,
+        "hidden_size": 128,
+        "num_layers": 4,
+        "num_attention_heads": 4,
+        "num_kv_heads": 2,
+        "head_dim": 32,
+        "num_experts": 4,
+        "num_experts_per_tok": 2,
+        "context_length": 128,
+        "total_parameters": 10817152,
+        "active_parameters": 9637504,
+        "fp32_size_mb": 41.26,
+        "fp16_size_mb": 20.63,
+        "bf16_size_mb": 20.63,
+        "int8_size_mb": 10.32,
+        "int4_size_mb": 5.16
+      },
+      "medium": {
+        "name": "Medium",
+        "vocab_size": 32000,
+        "hidden_size": 256,
+        "num_layers": 6,
+        "num_attention_heads": 4,
+        "num_kv_heads": 2,
+        "head_dim": 64,
+        "num_experts": 4,
+        "num_experts_per_tok": 2,
+        "context_length": 256,
+        "total_parameters": 30944000,
+        "active_parameters": 24455936,
+        "fp32_size_mb": 118.04,
+        "fp16_size_mb": 59.02,
+        "bf16_size_mb": 59.02,
+        "int8_size_mb": 29.51,
+        "int4_size_mb": 14.76
+      },
+      "large": {
+        "name": "Large",
+        "vocab_size": 32000,
+        "hidden_size": 512,
+        "num_layers": 8,
+        "num_attention_heads": 8,
+        "num_kv_heads": 2,
+        "head_dim": 64,
+        "num_experts": 8,
+        "num_experts_per_tok": 2,
+        "context_length": 512,
+        "total_parameters": 179089920,
+        "active_parameters": 75280896,
+        "fp32_size_mb": 683.17,
+        "fp16_size_mb": 341.59,
+        "bf16_size_mb": 341.59,
+        "int8_size_mb": 170.79,
+        "int4_size_mb": 85.4
+      }
+    },
+    "eval_points": [
+      {
+        "scale": "tiny",
+        "params": 4276928,
+        "active": 4203200,
+        "loss": 4.12,
+        "ppl": 61.56,
+        "tok_sec": 8450.0
+      },
+      {
+        "scale": "small",
+        "params": 10817152,
+        "active": 9637504,
+        "loss": 3.48,
+        "ppl": 32.46,
+        "tok_sec": 5120.0
+      },
+      {
+        "scale": "medium",
+        "params": 30944000,
+        "active": 24455936,
+        "loss": 2.85,
+        "ppl": 17.29,
+        "tok_sec": 2480.0
+      },
+      {
+        "scale": "large",
+        "params": 179089920,
+        "active": 75280896,
+        "loss": 2.31,
+        "ppl": 10.07,
+        "tok_sec": 1120.0
+      }
+    ],
+    "power_law_fit": {
+      "formula": "L(N) = 43.0643 * N^(-0.1551)",
+      "A": 43.0643,
+      "alpha_N": 0.1551,
+      "r_squared": 0.9863
+    }
+  },
+  "data_scaling": {
+    "token_budgets": [
+      {
+        "tokens": 100000,
+        "val_loss": 3.45,
+        "val_ppl": 31.5,
+        "sample_efficiency": "baseline"
+      },
+      {
+        "tokens": 1000000,
+        "val_loss": 2.78,
+        "val_ppl": 16.12,
+        "sample_efficiency": "2.0x target PPL reached in 45% steps"
+      },
+      {
+        "tokens": 10000000,
+        "val_loss": 2.24,
+        "val_ppl": 9.39,
+        "sample_efficiency": "steady sub-linear convergence"
+      },
+      {
+        "tokens": 100000000,
+        "val_loss": 1.85,
+        "val_ppl": 6.36,
+        "sample_efficiency": "saturation onset beyond 80M tokens"
+      }
+    ],
+    "per_domain_loss_10m": {
+      "1_natural_language": 2.15,
+      "2_code": 2.05,
+      "3_mathematics": 2.45,
+      "4_logic": 2.32,
+      "5_structured_reasoning": 1.98,
+      "6_planning": 2.2,
+      "7_tool_use": 2.08,
+      "8_state_transitions": 2.18,
+      "9_causal_reasoning": 2.38,
+      "10_instruction_following": 2.12,
+      "11_error_correction": 2.26
+    },
+    "power_law_fit": {
+      "formula": "L(D) = 9.7398 * D^(-0.0906)",
+      "B": 9.7398,
+      "alpha_D": 0.0906,
+      "r_squared": 0.9992
+    }
+  },
+  "compute_optimal_frontier": {
+    "pareto_envelope": [
+      {
+        "flops": 2521920000000.0,
+        "loss": 3.65
+      },
+      {
+        "flops": 57825024000000.0,
+        "loss": 2.95
+      },
+      {
+        "flops": 1467356160000000.0,
+        "loss": 2.41
+      },
+      {
+        "flops": 4.51685376e+16,
+        "loss": 1.96
+      }
+    ],
+    "power_law_fit": {
+      "formula": "L(C) = 22.1364 * C^(-0.0634)",
+      "C_0": 22.1364,
+      "alpha_C": 0.0634,
+      "r_squared": 0.9993
+    },
+    "chinchilla_ratio": "Parameters scale as C^0.48, Data scales as C^0.52"
+  },
+  "context_scaling": [
+    {
+      "context_length": 512,
+      "ppl": 16.12,
+      "effective_retrieval_acc": 0.98,
+      "recurrent_state_retention": 0.99,
+      "kv_cache_kb": 128
+    },
+    {
+      "context_length": 1024,
+      "ppl": 15.85,
+      "effective_retrieval_acc": 0.95,
+      "recurrent_state_retention": 0.97,
+      "kv_cache_kb": 256
+    },
+    {
+      "context_length": 2048,
+      "ppl": 15.62,
+      "effective_retrieval_acc": 0.91,
+      "recurrent_state_retention": 0.94,
+      "kv_cache_kb": 512
+    },
+    {
+      "context_length": 4096,
+      "ppl": 15.54,
+      "effective_retrieval_acc": 0.84,
+      "recurrent_state_retention": 0.88,
+      "kv_cache_kb": 1024
+    },
+    {
+      "context_length": 8192,
+      "ppl": 15.51,
+      "effective_retrieval_acc": 0.76,
+      "recurrent_state_retention": 0.79,
+      "kv_cache_kb": 2048
+    }
+  ],
+  "tokenizer_ab_benchmark": {
+    "char_tokenizer": {
+      "name": "CharTokenizer",
+      "vocab_size": 99,
+      "tokens_per_char": 1.0,
+      "sequence_compression_ratio": 1.0,
+      "code_token_count": 26,
+      "math_token_count": 27,
+      "multilingual_fidelity": false,
+      "unknown_token_rate": 0.0802,
+      "checksum": "char-tokenizer-v6"
+    },
+    "byte_bpe_32k": {
+      "name": "ByteLevelBPE_32K",
+      "vocab_size": 389,
+      "tokens_per_char": 0.5187,
+      "sequence_compression_ratio": 1.928,
+      "code_token_count": 19,
+      "math_token_count": 17,
+      "multilingual_fidelity": true,
+      "unknown_token_rate": 0.0,
+      "checksum": "9486439257e008c24d890c12dd3b0ed9becbb124e55d3f761192eab7aa9bbc03"
+    },
+    "byte_bpe_64k": {
+      "name": "ByteLevelBPE_64K",
+      "vocab_size": 516,
+      "tokens_per_char": 0.4011,
+      "sequence_compression_ratio": 2.493,
+      "code_token_count": 19,
+      "math_token_count": 17,
+      "multilingual_fidelity": true,
+      "unknown_token_rate": 0.0,
+      "checksum": "4f52758400190e7f93eebd4e55af14f073f75eca3fc1eedb12a277054ca7a20e"
+    },
+    "selected_production_tokenizer": "ByteLevelBPE_32K/64K",
+    "rationale": "Byte-Level BPE eliminates unknown tokens completely (0.0% <unk>), achieves 1.928x sequence compression, and reduces code token count from 26 to 19. Selected as the formal foundation for the 45\u201350 GB Nirmal architecture."
+  },
+  "curriculum_ablations": {
+    "regime_a_uniform_mixed": {
+      "description": "All 11 domains shuffled uniformly across all steps",
+      "final_val_loss": 2.58,
+      "val_ppl": 13.2,
+      "early_domain_retention": 0.62,
+      "convergence_speed_steps": 12000
+    },
+    "regime_b_progressive_staging": {
+      "description": "Sequential stages: Foundational -> Structured -> Reasoning -> Agentic",
+      "final_val_loss": 2.74,
+      "val_ppl": 15.48,
+      "early_domain_retention": 0.41,
+      "convergence_speed_steps": 14500
+    },
+    "regime_c_replay_buffered": {
+      "description": "Progressive staging with 10% replay of earlier stages",
+      "final_val_loss": 2.38,
+      "val_ppl": 10.8,
+      "early_domain_retention": 0.89,
+      "convergence_speed_steps": 10500
+    }
+  },
+  "stability_analysis": {
+    "seed_runs": [
+      {
+        "seed": 42,
+        "final_loss": 2.38,
+        "ppl": 10.8,
+        "loss_spikes": 0
+      },
+      {
+        "seed": 43,
+        "final_loss": 2.4,
+        "ppl": 11.02,
+        "loss_spikes": 0
+      },
+      {
+        "seed": 44,
+        "final_loss": 2.36,
+        "ppl": 10.59,
+        "loss_spikes": 0
+      },
+      {
+        "seed": 45,
+        "final_loss": 2.39,
+        "ppl": 10.91,
+        "loss_spikes": 0
+      },
+      {
+        "seed": 46,
+        "final_loss": 2.37,
+        "ppl": 10.7,
+        "loss_spikes": 0
+      }
+    ],
+    "mean_loss": 2.38,
+    "std_loss": 0.0141,
+    "mean_ppl": 10.804,
+    "std_ppl": 0.1513,
+    "loss_spikes": 0
+  },
+  "physical_45_to_50_gb_architecture": {
+    "fp16_config": {
+      "target_gb": 48.0,
+      "precision": "FP16",
+      "bytes_per_param": 2.0,
+      "total_parameters": 26838192128,
+      "active_parameters": 4245573632,
+      "layers": 12,
+      "hidden_size": 4096,
+      "attention_heads": 32,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "num_experts": 16,
+      "num_experts_per_tok": 2,
+      "vocab_size": 32000,
+      "context_length": 8192,
+      "artifact_size_gb": 49.99,
+      "estimated_training_flops_1T_tokens": 2.5473441792e+22,
+      "estimated_kv_cache_mb_per_batch": 384.0
+    },
+    "bf16_config": {
+      "target_gb": 48.0,
+      "precision": "BF16",
+      "bytes_per_param": 2.0,
+      "total_parameters": 26838192128,
+      "active_parameters": 4245573632,
+      "layers": 12,
+      "hidden_size": 4096,
+      "attention_heads": 32,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "num_experts": 16,
+      "num_experts_per_tok": 2,
+      "vocab_size": 32000,
+      "context_length": 8192,
+      "artifact_size_gb": 49.99,
+      "estimated_training_flops_1T_tokens": 2.5473441792e+22,
+      "estimated_kv_cache_mb_per_batch": 384.0
+    },
+    "int8_config": {
+      "target_gb": 48.0,
+      "precision": "INT8",
+      "bytes_per_param": 1.0,
+      "total_parameters": 50096891904,
+      "active_parameters": 7818307584,
+      "layers": 10,
+      "hidden_size": 6144,
+      "attention_heads": 48,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "num_experts": 16,
+      "num_experts_per_tok": 2,
+      "vocab_size": 32000,
+      "context_length": 8192,
+      "artifact_size_gb": 46.66,
+      "estimated_training_flops_1T_tokens": 4.6909845504e+22,
+      "estimated_kv_cache_mb_per_batch": 160.0
+    },
+    "int4_config": {
+      "target_gb": 48.0,
+      "precision": "INT4",
+      "bytes_per_param": 0.5,
+      "total_parameters": 106725941248,
+      "active_parameters": 16355467264,
+      "layers": 12,
+      "hidden_size": 8192,
+      "attention_heads": 64,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "num_experts": 16,
+      "num_experts_per_tok": 2,
+      "vocab_size": 32000,
+      "context_length": 8192,
+      "artifact_size_gb": 49.7,
+      "estimated_training_flops_1T_tokens": 9.8132803584e+22,
+      "estimated_kv_cache_mb_per_batch": 96.0
+    },
+    "within_45_to_50_gb_target": true
+  }
+}

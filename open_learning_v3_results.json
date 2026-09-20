@@ -1,0 +1,119 @@
+{
+  "timestamp": 1788625877.6231847,
+  "total_duration_sec": 0.4,
+  "multi_seed_evaluation": {
+    "baseline": {
+      "mean": 0.0,
+      "std": 0.0,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "learned": {
+      "mean": 1.0,
+      "std": 0.0,
+      "median": 1.0,
+      "min": 1.0,
+      "max": 1.0
+    },
+    "mean_gain": 1.0,
+    "details": {
+      "seed_1": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_2": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_3": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_4": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_5": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_6": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_7": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_8": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_9": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      },
+      "seed_10": {
+        "baseline_accuracy": 0.0,
+        "learned_accuracy": 1.0,
+        "gain": 1.0,
+        "baseline_cost": 0.0,
+        "learned_cost": 84.38
+      }
+    }
+  },
+  "learning_curves": {
+    "budget_0": 0.0,
+    "budget_1": 0.25,
+    "budget_2": 0.5,
+    "budget_4": 1.0,
+    "budget_8": 1.0,
+    "budget_16": 1.0,
+    "budget_32": 1.0,
+    "budget_64": 1.0
+  },
+  "causal_ablation_matrix": {
+    "Full System": 1.0,
+    "Learning Engine OFF": 0.25,
+    "Procedural Memory OFF": 0.25,
+    "Semantic Memory OFF": 0.5,
+    "Episodic Memory OFF": 0.0,
+    "Strategy Selection OFF": 0.75,
+    "Verification OFF": 0.5,
+    "Replanning OFF": 0.75,
+    "Credit Assignment OFF": 0.75
+  },
+  "anti_leakage_audit": {
+    "clean": true,
+    "audited_files": 21,
+    "violations": []
+  }
+}

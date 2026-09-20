@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-09-06T19:40:00Z",
+  "verdict": "DATA_NOT_READY",
+  "is_ready": false,
+  "metrics": {
+    "local_verified_tokens": 233997,
+    "remote_verified_tokens": 0,
+    "planned_tokens": 200000000000,
+    "token_deficit": 199999766003,
+    "completion_pct": 0.000117,
+    "total_documents": 737,
+    "total_shards": 6
+  },
+  "checks": {
+    "token_volume_check": "FAIL",
+    "checksum_integrity_check": "PASS",
+    "license_compliance_check": "PASS",
+    "split_isolation_check": "PASS",
+    "zero_exact_duplicates_check": "PASS"
+  },
+  "blocking_issues": [
+    "Token deficit: 199,999,766,003 tokens missing (staged: 233,997 / required: 200,000,000,000)"
+  ]
+}

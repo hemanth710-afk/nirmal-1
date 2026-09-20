@@ -1,0 +1,20 @@
+# Nirmal-1 Production Training Dependencies (Linux Cluster)
+# Standardized for Python 3.11 / 3.12 with PyTorch 2.4.0+ and CUDA 12.4
+
+torch>=2.4.0
+torchvision>=0.19.0
+torchaudio>=2.4.0
+numpy>=2.0.0,<2.2.0
+transformers>=4.44.0
+tokenizers>=0.19.1
+safetensors>=0.4.4
+zstandard>=0.23.0
+pydantic>=2.8.0
+psutil>=6.0.0
+wandb>=0.17.0
+pytest>=8.3.0
+pyyaml>=6.0.2
+
+# Accelerated Kernels (Linux only - requires CUDA Toolkit & C++ compiler)
+# flash-attn>=2.6.3
+# triton>=3.0.0

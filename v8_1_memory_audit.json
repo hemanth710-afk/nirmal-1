@@ -1,0 +1,23 @@
+{
+  "milestone": "NIRMAL-1 V8.1: TRAINING MEMORY AUDIT",
+  "scaled_verification": {
+    "test_params": 10077644,
+    "weights_prediction_error_pct": 0.0,
+    "optimizer_prediction_error_pct": 0.0005,
+    "decay_params_count": 10075136,
+    "no_decay_params_count": 2508
+  },
+  "production_25_91b_breakdown": {
+    "total_parameters": 25908188576,
+    "weights_gb": 48.26,
+    "gradients_gb": 48.26,
+    "optimizer_states_gb": 289.55,
+    "activations_checkpointed_gb": 7.14,
+    "kv_cache_gb": 0.09,
+    "temporary_buffers_gb": 8.0,
+    "unsharded_training_total_gb": 401.29,
+    "fsdp_8_gpu_per_device_gb": 63.49,
+    "safety_headroom_80gb_device_gb": 16.51,
+    "feasibility_on_8x_h100": true
+  }
+}

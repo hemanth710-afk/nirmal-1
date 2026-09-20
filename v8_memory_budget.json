@@ -1,0 +1,50 @@
+{
+  "milestone": "NIRMAL-1 V8: MEMORY BUDGET",
+  "detailed_memory_breakdown": {
+    "model_name": "Candidate C (Target)",
+    "precision": "BF16",
+    "total_params": 25907056640,
+    "model_weights_gb": 48.26,
+    "gradients_gb": 48.26,
+    "optimizer_states_gb": 289.53,
+    "activations_without_checkpointing_gb": 25.5,
+    "activations_with_checkpointing_gb": 7.14,
+    "kv_cache_gb": 0.09,
+    "temporary_buffers_gb": 8.0,
+    "total_single_gpu_training_gb": 401.28,
+    "fsdp_sharded_8_gpu_per_device_gb": 63.49,
+    "fsdp_sharded_16_gpu_per_device_gb": 39.36,
+    "recommended_gpu_type": "8x NVIDIA H100 (80GB) SXM5 with NVLink"
+  },
+  "cluster_allocations": {
+    "single_gpu_a100_80gb": {
+      "gpus": 1,
+      "memory_per_gpu_gb": 401.28,
+      "status": "IMPOSSIBLE without deep CPU offloading (>400 GB needed)"
+    },
+    "8x_h100_80gb_sxm5": {
+      "gpus": 8,
+      "memory_per_gpu_gb": 63.49,
+      "headroom_gb": 16.51,
+      "status": "OPTIMAL (63.49 GB allocated, 16.51 GB safety headroom)"
+    },
+    "16x_a100_80gb": {
+      "gpus": 16,
+      "memory_per_gpu_gb": 39.36,
+      "headroom_gb": 40.64,
+      "status": "HIGH HEADROOM (37.94 GB allocated, 42.06 GB safety headroom)"
+    },
+    "64x_h100_80gb": {
+      "gpus": 64,
+      "memory_per_gpu_gb": 21.17,
+      "headroom_gb": 61.2,
+      "status": "FAST PRODUCTION POD (18.80 GB allocated per device)"
+    }
+  },
+  "communication_overhead": {
+    "world_size": 8,
+    "fsdp_total_comm_mb_per_step": 21225.2,
+    "moe_alltoall_comm_mb_per_step": 1344.0,
+    "total_step_comm_mb": 22569.2
+  }
+}

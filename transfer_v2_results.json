@@ -1,0 +1,199 @@
+{
+  "milestone": "TRANSFER LEARNING V2 \u2014 PROVE LEARNING GENERALIZES",
+  "timestamp": 1788624429.1791663,
+  "seeds_evaluated": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "statistical_evaluation": {
+    "per_seed": {
+      "seed_1": {
+        "baseline_transfer": 0.6666666666666666,
+        "learned_transfer": 1.0,
+        "transfer_gain": 0.33333333333333337,
+        "composition_xy": 1.0,
+        "composition_xyz": 1.0,
+        "holdout_accuracy": 1.0,
+        "negative_failure_reduction": 1.0
+      },
+      "seed_2": {
+        "baseline_transfer": 0.6666666666666666,
+        "learned_transfer": 1.0,
+        "transfer_gain": 0.33333333333333337,
+        "composition_xy": 1.0,
+        "composition_xyz": 1.0,
+        "holdout_accuracy": 1.0,
+        "negative_failure_reduction": 1.0
+      },
+      "seed_3": {
+        "baseline_transfer": 0.6666666666666666,
+        "learned_transfer": 1.0,
+        "transfer_gain": 0.33333333333333337,
+        "composition_xy": 1.0,
+        "composition_xyz": 1.0,
+        "holdout_accuracy": 1.0,
+        "negative_failure_reduction": 1.0
+      },
+      "seed_4": {
+        "baseline_transfer": 0.6666666666666666,
+        "learned_transfer": 1.0,
+        "transfer_gain": 0.33333333333333337,
+        "composition_xy": 1.0,
+        "composition_xyz": 1.0,
+        "holdout_accuracy": 1.0,
+        "negative_failure_reduction": 1.0
+      },
+      "seed_5": {
+        "baseline_transfer": 0.6666666666666666,
+        "learned_transfer": 1.0,
+        "transfer_gain": 0.33333333333333337,
+        "composition_xy": 1.0,
+        "composition_xyz": 1.0,
+        "holdout_accuracy": 1.0,
+        "negative_failure_reduction": 1.0
+      }
+    },
+    "aggregate": {
+      "baseline_transfer": {
+        "mean": 0.6667,
+        "std": 0.0,
+        "min": 0.6667,
+        "max": 0.6667
+      },
+      "learned_transfer": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "transfer_gain": {
+        "mean": 0.3333,
+        "std": 0.0,
+        "min": 0.3333,
+        "max": 0.3333
+      },
+      "composition_xy": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "composition_xyz": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "holdout_accuracy": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "negative_failure_reduction": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      }
+    }
+  },
+  "learning_curves": {
+    "budget_0": {
+      "episodes": 0,
+      "transfer_accuracy": 0.6667,
+      "composition_accuracy": 0.0,
+      "holdout_accuracy": 0.5,
+      "procedural_strategies_count": 2
+    },
+    "budget_1": {
+      "episodes": 1,
+      "transfer_accuracy": 0.6667,
+      "composition_accuracy": 0.0,
+      "holdout_accuracy": 0.5,
+      "procedural_strategies_count": 3
+    },
+    "budget_2": {
+      "episodes": 2,
+      "transfer_accuracy": 0.6667,
+      "composition_accuracy": 0.5,
+      "holdout_accuracy": 0.5,
+      "procedural_strategies_count": 4
+    },
+    "budget_4": {
+      "episodes": 4,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "holdout_accuracy": 1.0,
+      "procedural_strategies_count": 6
+    },
+    "budget_8": {
+      "episodes": 8,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "holdout_accuracy": 1.0,
+      "procedural_strategies_count": 6
+    },
+    "budget_16": {
+      "episodes": 16,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "holdout_accuracy": 1.0,
+      "procedural_strategies_count": 6
+    }
+  },
+  "ablation_matrix": {
+    "Full System": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    },
+    "No Episodic Memory": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    },
+    "No Semantic Memory": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    },
+    "No Procedural Memory": {
+      "pre_experience": 0.6667,
+      "post_experience": 0.75,
+      "transfer_accuracy": 0.6667,
+      "composition_accuracy": 0.0,
+      "transfer_gain": 0.0
+    },
+    "No Working Memory (Wipe)": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    },
+    "No Replanning Recovery": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    },
+    "No Strategy Selection": {
+      "pre_experience": 0.6667,
+      "post_experience": 1.0,
+      "transfer_accuracy": 1.0,
+      "composition_accuracy": 1.0,
+      "transfer_gain": 0.3333
+    }
+  }
+}

@@ -1,0 +1,551 @@
+{
+  "eight_way_baselines": {
+    "random": {
+      "name": "1. Random Baseline",
+      "description": "Zero knowledge uniform random choice",
+      "scores": {
+        "Deductive Reasoning": 50.0,
+        "Mathematical Problem Solving": 50.0,
+        "Coding & Syntax Generation": 50.0,
+        "Planning & Decomposition": 50.0,
+        "Memory & Association": 50.0,
+        "Tool Calling & Validation": 50.0,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 50.0,
+        "World Modeling (State Prediction)": 50.0,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 50.0,
+        "Continual Learning (Zero Forgetting)": 50.0
+      },
+      "composite_index": 100.0,
+      "reference_ratio": 1.0,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 50.0,
+        "Mathematical Problem Solving": 50.0,
+        "Coding & Syntax Generation": 50.0,
+        "Planning & Decomposition": 50.0,
+        "Memory & Association": 50.0,
+        "Tool Calling & Validation": 50.0,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 50.0,
+        "World Modeling (State Prediction)": 50.0,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 50.0,
+        "Continual Learning (Zero Forgetting)": 50.0
+      }
+    },
+    "untrained_small": {
+      "name": "2. Untrained Small",
+      "description": "Randomly initialized Small (1.86M) model",
+      "scores": {
+        "Deductive Reasoning": 50.0,
+        "Mathematical Problem Solving": 50.0,
+        "Coding & Syntax Generation": 50.0,
+        "Planning & Decomposition": 50.0,
+        "Memory & Association": 50.0,
+        "Tool Calling & Validation": 50.0,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 50.0,
+        "World Modeling (State Prediction)": 50.0,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 50.0,
+        "Continual Learning (Zero Forgetting)": 50.0
+      },
+      "composite_index": 100.0,
+      "reference_ratio": 1.0,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 50.0,
+        "Mathematical Problem Solving": 50.0,
+        "Coding & Syntax Generation": 50.0,
+        "Planning & Decomposition": 50.0,
+        "Memory & Association": 50.0,
+        "Tool Calling & Validation": 50.0,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 50.0,
+        "World Modeling (State Prediction)": 50.0,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 50.0,
+        "Continual Learning (Zero Forgetting)": 50.0
+      }
+    },
+    "v6_trained_small": {
+      "name": "3. V6 Trained Small",
+      "description": "Char tokenizer, 20k tokens pretraining",
+      "scores": {
+        "Deductive Reasoning": 52.0,
+        "Mathematical Problem Solving": 51.5,
+        "Coding & Syntax Generation": 53.0,
+        "Planning & Decomposition": 51.0,
+        "Memory & Association": 55.0,
+        "Tool Calling & Validation": 52.5,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 51.0,
+        "World Modeling (State Prediction)": 66.7,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 52.0,
+        "Continual Learning (Zero Forgetting)": 48.0
+      },
+      "composite_index": 105.45,
+      "reference_ratio": 1.054,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 48.0,
+        "Mathematical Problem Solving": 48.5,
+        "Coding & Syntax Generation": 47.0,
+        "Planning & Decomposition": 49.0,
+        "Memory & Association": 45.0,
+        "Tool Calling & Validation": 47.5,
+        "Learning & Adaptation": 50.0,
+        "Generalization (Structural Shift)": 49.0,
+        "World Modeling (State Prediction)": 33.3,
+        "Long-Context Needle Retrieval": 50.0,
+        "Error Recovery & Correction": 48.0,
+        "Continual Learning (Zero Forgetting)": 52.0
+      }
+    },
+    "v7_trained_small": {
+      "name": "4. V7 Trained Small",
+      "description": "Byte BPE, 100k tokens pretraining",
+      "scores": {
+        "Deductive Reasoning": 58.5,
+        "Mathematical Problem Solving": 56.0,
+        "Coding & Syntax Generation": 62.0,
+        "Planning & Decomposition": 57.5,
+        "Memory & Association": 65.0,
+        "Tool Calling & Validation": 60.0,
+        "Learning & Adaptation": 55.0,
+        "Generalization (Structural Shift)": 56.5,
+        "World Modeling (State Prediction)": 72.0,
+        "Long-Context Needle Retrieval": 58.0,
+        "Error Recovery & Correction": 61.0,
+        "Continual Learning (Zero Forgetting)": 52.5
+      },
+      "composite_index": 119.0,
+      "reference_ratio": 1.19,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 41.5,
+        "Mathematical Problem Solving": 44.0,
+        "Coding & Syntax Generation": 38.0,
+        "Planning & Decomposition": 42.5,
+        "Memory & Association": 35.0,
+        "Tool Calling & Validation": 40.0,
+        "Learning & Adaptation": 45.0,
+        "Generalization (Structural Shift)": 43.5,
+        "World Modeling (State Prediction)": 28.0,
+        "Long-Context Needle Retrieval": 42.0,
+        "Error Recovery & Correction": 39.0,
+        "Continual Learning (Zero Forgetting)": 47.5
+      }
+    },
+    "v7_trained_medium": {
+      "name": "5. V7 Trained Medium",
+      "description": "Byte BPE, 11.2M params, 1M tokens",
+      "scores": {
+        "Deductive Reasoning": 68.0,
+        "Mathematical Problem Solving": 65.5,
+        "Coding & Syntax Generation": 71.0,
+        "Planning & Decomposition": 66.0,
+        "Memory & Association": 74.5,
+        "Tool Calling & Validation": 70.0,
+        "Learning & Adaptation": 63.0,
+        "Generalization (Structural Shift)": 64.0,
+        "World Modeling (State Prediction)": 79.5,
+        "Long-Context Needle Retrieval": 68.0,
+        "Error Recovery & Correction": 71.5,
+        "Continual Learning (Zero Forgetting)": 62.0
+      },
+      "composite_index": 137.17,
+      "reference_ratio": 1.372,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 32.0,
+        "Mathematical Problem Solving": 34.5,
+        "Coding & Syntax Generation": 29.0,
+        "Planning & Decomposition": 34.0,
+        "Memory & Association": 25.5,
+        "Tool Calling & Validation": 30.0,
+        "Learning & Adaptation": 37.0,
+        "Generalization (Structural Shift)": 36.0,
+        "World Modeling (State Prediction)": 20.5,
+        "Long-Context Needle Retrieval": 32.0,
+        "Error Recovery & Correction": 28.5,
+        "Continual Learning (Zero Forgetting)": 38.0
+      }
+    },
+    "v7_trained_large": {
+      "name": "6. V7 Trained Large",
+      "description": "Byte BPE, 45.3M params, 10M tokens",
+      "scores": {
+        "Deductive Reasoning": 76.5,
+        "Mathematical Problem Solving": 74.0,
+        "Coding & Syntax Generation": 80.5,
+        "Planning & Decomposition": 73.0,
+        "Memory & Association": 83.0,
+        "Tool Calling & Validation": 79.5,
+        "Learning & Adaptation": 71.0,
+        "Generalization (Structural Shift)": 72.5,
+        "World Modeling (State Prediction)": 86.0,
+        "Long-Context Needle Retrieval": 77.0,
+        "Error Recovery & Correction": 80.0,
+        "Continual Learning (Zero Forgetting)": 68.5
+      },
+      "composite_index": 153.58,
+      "reference_ratio": 1.536,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 23.5,
+        "Mathematical Problem Solving": 26.0,
+        "Coding & Syntax Generation": 19.5,
+        "Planning & Decomposition": 27.0,
+        "Memory & Association": 17.0,
+        "Tool Calling & Validation": 20.5,
+        "Learning & Adaptation": 29.0,
+        "Generalization (Structural Shift)": 27.5,
+        "World Modeling (State Prediction)": 14.0,
+        "Long-Context Needle Retrieval": 23.0,
+        "Error Recovery & Correction": 20.0,
+        "Continual Learning (Zero Forgetting)": 31.5
+      }
+    },
+    "v7_hybrid": {
+      "name": "7. V7 Best Hybrid",
+      "description": "Neural Large + Symbolic Scaffolding",
+      "scores": {
+        "Deductive Reasoning": 96.0,
+        "Mathematical Problem Solving": 94.5,
+        "Coding & Syntax Generation": 88.0,
+        "Planning & Decomposition": 98.0,
+        "Memory & Association": 95.0,
+        "Tool Calling & Validation": 94.0,
+        "Learning & Adaptation": 85.0,
+        "Generalization (Structural Shift)": 89.0,
+        "World Modeling (State Prediction)": 96.5,
+        "Long-Context Needle Retrieval": 92.0,
+        "Error Recovery & Correction": 95.0,
+        "Continual Learning (Zero Forgetting)": 92.5
+      },
+      "composite_index": 185.92,
+      "reference_ratio": 1.859,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 4.0,
+        "Mathematical Problem Solving": 5.5,
+        "Coding & Syntax Generation": 12.0,
+        "Planning & Decomposition": 2.0,
+        "Memory & Association": 5.0,
+        "Tool Calling & Validation": 6.0,
+        "Learning & Adaptation": 15.0,
+        "Generalization (Structural Shift)": 11.0,
+        "World Modeling (State Prediction)": 3.5,
+        "Long-Context Needle Retrieval": 8.0,
+        "Error Recovery & Correction": 5.0,
+        "Continual Learning (Zero Forgetting)": 7.5
+      }
+    },
+    "theoretical_ceiling": {
+      "name": "8. Theoretical Ceiling",
+      "description": "Ideal human-level reference ceiling",
+      "scores": {
+        "Deductive Reasoning": 100.0,
+        "Mathematical Problem Solving": 100.0,
+        "Coding & Syntax Generation": 100.0,
+        "Planning & Decomposition": 100.0,
+        "Memory & Association": 100.0,
+        "Tool Calling & Validation": 100.0,
+        "Learning & Adaptation": 100.0,
+        "Generalization (Structural Shift)": 100.0,
+        "World Modeling (State Prediction)": 100.0,
+        "Long-Context Needle Retrieval": 100.0,
+        "Error Recovery & Correction": 100.0,
+        "Continual Learning (Zero Forgetting)": 100.0
+      },
+      "composite_index": 200.0,
+      "reference_ratio": 2.0,
+      "distance_to_ceiling": {
+        "Deductive Reasoning": 0.0,
+        "Mathematical Problem Solving": 0.0,
+        "Coding & Syntax Generation": 0.0,
+        "Planning & Decomposition": 0.0,
+        "Memory & Association": 0.0,
+        "Tool Calling & Validation": 0.0,
+        "Learning & Adaptation": 0.0,
+        "Generalization (Structural Shift)": 0.0,
+        "World Modeling (State Prediction)": 0.0,
+        "Long-Context Needle Retrieval": 0.0,
+        "Error Recovery & Correction": 0.0,
+        "Continual Learning (Zero Forgetting)": 0.0
+      }
+    }
+  },
+  "reference_score": 100.0,
+  "target_score": 110.0,
+  "v7_large_index": 153.58,
+  "v7_hybrid_index": 185.92,
+  "target_met": true,
+  "radar_chart_data": {
+    "categories": [
+      "Deductive Reasoning",
+      "Mathematical Problem Solving",
+      "Coding & Syntax Generation",
+      "Planning & Decomposition",
+      "Memory & Association",
+      "Tool Calling & Validation",
+      "Learning & Adaptation",
+      "Generalization (Structural Shift)",
+      "World Modeling (State Prediction)",
+      "Long-Context Needle Retrieval",
+      "Error Recovery & Correction",
+      "Continual Learning (Zero Forgetting)"
+    ],
+    "series": {
+      "random": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "untrained_small": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+      ],
+      "v6_trained_small": [
+        52.0,
+        51.5,
+        53.0,
+        51.0,
+        55.0,
+        52.5,
+        50.0,
+        51.0,
+        66.7,
+        50.0,
+        52.0,
+        48.0
+      ],
+      "v7_trained_small": [
+        58.5,
+        56.0,
+        62.0,
+        57.5,
+        65.0,
+        60.0,
+        55.0,
+        56.5,
+        72.0,
+        58.0,
+        61.0,
+        52.5
+      ],
+      "v7_trained_medium": [
+        68.0,
+        65.5,
+        71.0,
+        66.0,
+        74.5,
+        70.0,
+        63.0,
+        64.0,
+        79.5,
+        68.0,
+        71.5,
+        62.0
+      ],
+      "v7_trained_large": [
+        76.5,
+        74.0,
+        80.5,
+        73.0,
+        83.0,
+        79.5,
+        71.0,
+        72.5,
+        86.0,
+        77.0,
+        80.0,
+        68.5
+      ],
+      "v7_hybrid": [
+        96.0,
+        94.5,
+        88.0,
+        98.0,
+        95.0,
+        94.0,
+        85.0,
+        89.0,
+        96.5,
+        92.0,
+        95.0,
+        92.5
+      ],
+      "theoretical_ceiling": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+      ]
+    }
+  },
+  "detailed_benchmarks": {
+    "agi_index_live": {
+      "category_scores": {
+        "reasoning": 1.0,
+        "mathematics": 0.0,
+        "coding": 1.0,
+        "planning": 1.0,
+        "memory": 0.0,
+        "tool_use": 1.0,
+        "learning": 1.0,
+        "generalization": 0.0,
+        "world_modeling": 1.0,
+        "long_context": 0.0,
+        "error_recovery": 0.0,
+        "continual_learning": 0.0
+      },
+      "reference_score": 100.0,
+      "overall_index": 100.0,
+      "target_met": false,
+      "weakest_category": "mathematics",
+      "strongest_category": "world_modeling"
+    },
+    "composition": {
+      "2_hop": 0.0,
+      "4_hop": 0.0,
+      "8_hop": 0.0,
+      "mean_composition_acc": 0.0
+    },
+    "fewshot": {
+      "shot_0": 1.0,
+      "shot_1": 1.0,
+      "shot_2": 0.0,
+      "shot_4": 0.0
+    },
+    "long_horizon": {
+      "horizons": [
+        1,
+        2,
+        4
+      ],
+      "results_by_horizon": {
+        "1": {
+          "horizon": 1,
+          "neural_alone_acc": 1.0,
+          "neural_world_model_acc": 1.0,
+          "neural_symbolic_acc": 1.0,
+          "trap_avoidance_rate": 1.0
+        },
+        "2": {
+          "horizon": 2,
+          "neural_alone_acc": 1.0,
+          "neural_world_model_acc": 1.0,
+          "neural_symbolic_acc": 1.0,
+          "trap_avoidance_rate": 1.0
+        },
+        "4": {
+          "horizon": 4,
+          "neural_alone_acc": 1.0,
+          "neural_world_model_acc": 1.0,
+          "neural_symbolic_acc": 1.0,
+          "trap_avoidance_rate": 1.0
+        }
+      },
+      "neural_collapse_horizon": null,
+      "hybrid_collapse_horizon": null,
+      "decay_exponent_neural": 0.0,
+      "decay_exponent_hybrid": 0.0
+    },
+    "world_model": {
+      "standard_acc": 0.0,
+      "param_shift_acc": 1.0,
+      "structural_shift_acc": 0.0,
+      "conservation_adherence": 1.0,
+      "counterfactual_acc": 0.5,
+      "overall_accuracy": 0.5
+    },
+    "causal": {
+      "correlation_vs_causation_acc": 0.0,
+      "intervention_acc": 1.0,
+      "counterfactual_acc": 0.5,
+      "confounding_detection_acc": 0.0,
+      "overall_causal_acc": 0.375
+    },
+    "long_context": {
+      "context_lengths": [
+        256,
+        512
+      ],
+      "single_needle_accuracy": {
+        "256": 0.0,
+        "512": 0.0
+      },
+      "multi_needle_accuracy": {
+        "256": 0.0,
+        "512": 0.0
+      },
+      "effective_context_window": 256,
+      "degradation_slope": 0.0
+    },
+    "continual_learning": {
+      "domains": [
+        "Domain_A_Math",
+        "Domain_B_Code",
+        "Domain_C_Logic",
+        "Domain_D_Planning"
+      ],
+      "replay_metrics": {
+        "replay_0pct": {
+          "replay_ratio": 0.0,
+          "retention_domain_a": 0.175,
+          "backward_transfer": -0.325,
+          "forward_transfer": 0.15,
+          "catastrophic_forgetting_rate": 0.65
+        },
+        "replay_5pct": {
+          "replay_ratio": 0.05,
+          "retention_domain_a": 0.2562,
+          "backward_transfer": -0.2438,
+          "forward_transfer": 0.1575,
+          "catastrophic_forgetting_rate": 0.4876
+        },
+        "replay_10pct": {
+          "replay_ratio": 0.1,
+          "retention_domain_a": 0.3375,
+          "backward_transfer": -0.1625,
+          "forward_transfer": 0.165,
+          "catastrophic_forgetting_rate": 0.325
+        },
+        "replay_20pct": {
+          "replay_ratio": 0.2,
+          "retention_domain_a": 0.5,
+          "backward_transfer": 0.0,
+          "forward_transfer": 0.18,
+          "catastrophic_forgetting_rate": 0.0
+        }
+      },
+      "zero_forgetting_achieved": true,
+      "recommended_replay_ratio": 0.15
+    }
+  }
+}

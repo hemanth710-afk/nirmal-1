@@ -1,0 +1,149 @@
+{
+  "milestone": "NIRMAL-1 V8.1: DATASET & CAPABILITY PLAN",
+  "dataset_readiness_audit": {
+    "available_local_verified_tokens": 105420,
+    "required_production_tokens": 200000000000,
+    "token_deficit": 199999894580,
+    "readiness_percentage": 5.271e-05,
+    "is_dataset_ready_for_launch": false,
+    "policy_statement": "The production dataset must exist before claiming the model is train-ready. Do not claim a 200B-token dataset exists merely because the plan supports it."
+  },
+  "training_curve_projections": {
+    "disclaimer": "ALL PROJECTED NUMBERS ARE MATHEMATICAL SCALING PROJECTIONS \u2014 NOT MEASURED RESULTS",
+    "checkpoints": [
+      {
+        "tokens_billion": 10,
+        "optimistic": {
+          "loss": 3.863,
+          "perplexity": 47.61,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 4.362,
+          "perplexity": 78.41,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.901,
+          "perplexity": 134.42,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      },
+      {
+        "tokens_billion": 25,
+        "optimistic": {
+          "loss": 3.632,
+          "perplexity": 37.79,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 4.132,
+          "perplexity": 62.3,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.684,
+          "perplexity": 108.2,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      },
+      {
+        "tokens_billion": 50,
+        "optimistic": {
+          "loss": 3.472,
+          "perplexity": 32.2,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 3.971,
+          "perplexity": 53.04,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.528,
+          "perplexity": 92.57,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      },
+      {
+        "tokens_billion": 100,
+        "optimistic": {
+          "loss": 3.323,
+          "perplexity": 27.74,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 3.819,
+          "perplexity": 45.56,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.381,
+          "perplexity": 79.92,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      },
+      {
+        "tokens_billion": 150,
+        "optimistic": {
+          "loss": 3.241,
+          "perplexity": 25.56,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 3.735,
+          "perplexity": 41.89,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.298,
+          "perplexity": 73.55,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      },
+      {
+        "tokens_billion": 200,
+        "optimistic": {
+          "loss": 3.185,
+          "perplexity": 24.17,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "central": {
+          "loss": 3.677,
+          "perplexity": 39.53,
+          "nature": "PROJECTION_NOT_MEASURED"
+        },
+        "pessimistic": {
+          "loss": 4.241,
+          "perplexity": 69.48,
+          "nature": "PROJECTION_NOT_MEASURED"
+        }
+      }
+    ]
+  },
+  "cryptographic_benchmark_freeze": {
+    "evaluation_code_hashes": {
+      "open_world.py": "1b6ea6d5925743fb3aefecfc75769e9bc11fafdd5db16a60aa502e9aadff023e",
+      "novel_tasks.py": "d93d6a336b01193f95b8d81ae2a54da6bab99eebeadd4fdb52fe6a8ba27916b9",
+      "transfer_tasks.py": "cc3b28b8f2c31c4763463ff5092fe1ed905c558c03b0ce035380d8c0fd3d7917",
+      "test_open_world.py": "3a4191bfa7bfad962675e45a2a9fe48646f960001938c19e89fe2c21b26b38e0",
+      "test_counterfactual.py": "f6e470d7d90899be304d31f4a2f3b4ccb9de3ad836dd77db1e96f034de8f69aa",
+      "test_causal_discovery.py": "e56b1f525dd54451ecbcd9186987011d06d6c860b9fd5b242ecd8596ee25e5fd",
+      "test_neural_v5.py": "8d1807931741c4120140bb170a9565b1d789b160a97a8060f35fb7d6d77a6f6f",
+      "configuration_nirmal.py": "9b340eb4ef6af378acb15b1483d4b14ffd03783b97291871f1b9c46c4fd50514"
+    },
+    "frozen_evaluation_seeds": [
+      42,
+      137,
+      2024,
+      777,
+      999
+    ],
+    "seeds_sha256": "9c9c77811907f74d9041931dc3c52f67aa0fdd6a10d1d75c7bf54c4929059904",
+    "data_split_integrity": {
+      "train_set": "100% available during pretraining",
+      "dev_set": "Held-out validation, monitored for loss & perplexity without test contamination",
+      "held_out_benchmark": "Cryptographically locked, strictly evaluated post-training with 0% data leakage"
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "milestone": "NIRMAL-1 V5 BLIND NEURAL EVALUATION",
+  "timestamp": 1788631311.8025818,
+  "num_trials": 25,
+  "anti_leakage_audit_passed": true,
+  "blind_dense_retrieval_rate": 1.0,
+  "blind_state_prediction_accuracy": 1.0,
+  "blind_semantic_verification_rate": 1.0,
+  "trials": [
+    {
+      "trial": 1,
+      "nonce": "3f0c44",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 2,
+      "nonce": "85e974",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 3,
+      "nonce": "1f811c",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 4,
+      "nonce": "492dc0",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 5,
+      "nonce": "079e5f",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 6,
+      "nonce": "0055c3",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 7,
+      "nonce": "90df8f",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 8,
+      "nonce": "1c91a5",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 9,
+      "nonce": "f5f728",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 10,
+      "nonce": "18dedd",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 11,
+      "nonce": "7bd739",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 12,
+      "nonce": "09c2ec",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 13,
+      "nonce": "5bc04b",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 14,
+      "nonce": "945cd8",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 15,
+      "nonce": "9054af",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 16,
+      "nonce": "0967fc",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 17,
+      "nonce": "3310eb",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 18,
+      "nonce": "499339",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 19,
+      "nonce": "fc6e29",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 20,
+      "nonce": "157cc2",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 21,
+      "nonce": "6afd5c",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 22,
+      "nonce": "486bd7",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 23,
+      "nonce": "6b61e6",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 24,
+      "nonce": "3c431b",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    },
+    {
+      "trial": 25,
+      "nonce": "c0ca87",
+      "retrieval_success": true,
+      "prediction_accuracy": 1.0,
+      "verification_success": true
+    }
+  ]
+}

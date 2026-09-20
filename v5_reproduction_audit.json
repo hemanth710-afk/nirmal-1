@@ -1,0 +1,176 @@
+[
+  {
+    "experiment_name": "Neural Pretraining 5-Seed Convergence",
+    "source_file": "training/train_neural.py",
+    "evaluation_function": "train_neural_model",
+    "dataset_generator": "training/neural_curriculum.py:NeuralCurriculum",
+    "model_configuration": "Tiny (hidden=64, layers=2, heads=2/1, experts=2)",
+    "training_configuration": "AdamW (lr=2e-3, cosine decay, batch_size=4)",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sample_count": 240,
+    "reported_result": "Initial Loss 4.7931 -> Final Loss 2.2302 (PPL 9.35)",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Section 21 Tokenization Stress Suite",
+    "source_file": "training/evaluate_neural.py",
+    "evaluation_function": "run_tokenization_stress_test",
+    "dataset_generator": "training/evaluate_neural.py:sample_corpus",
+    "model_configuration": "CharTokenizer",
+    "training_configuration": "N/A (Tokenizer)",
+    "training_steps": 0,
+    "total_tokens_processed": 164,
+    "seeds": [
+      42
+    ],
+    "sample_count": 5,
+    "reported_result": "Coverage 98.04%, Expansion 1.000, Rare=True, Num=True",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Holdout Compositional Generalization",
+    "source_file": "evals/neural_generalization.py",
+    "evaluation_function": "run_compositional_holdout_evaluation",
+    "dataset_generator": "evals/neural_generalization.py:composed_queries",
+    "model_configuration": "Hybrid World Model + NeuralBridge",
+    "training_configuration": "Trained on atomic transitions A->B, B->C, C->D",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 6,
+    "reported_result": "1-hop=100%, 2-hop=100%, 3-hop=100%",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Representation Generalization",
+    "source_file": "evals/neural_generalization.py",
+    "evaluation_function": "run_representation_generalization_evaluation",
+    "dataset_generator": "evals/neural_generalization.py:randomized_pairs",
+    "model_configuration": "NeuralBridge dense text embeddings",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 9,
+    "reported_result": "Canonical Sim=0.9366, Randomized Sim=0.9208, Retention=98.31%",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "State Transition Prediction & Calibration",
+    "source_file": "evals/neural_state_prediction.py",
+    "evaluation_function": "run_state_prediction_evaluation",
+    "dataset_generator": "evals/neural_state_prediction.py:test_cases",
+    "model_configuration": "NeuralBridge",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 5,
+    "reported_result": "Var Accuracy=10.0%, Exact Match=0.0%, Brier Score=0.6400",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "World Model 3-Way Ablation",
+    "source_file": "evals/neural_state_prediction.py",
+    "evaluation_function": "run_world_model_ablation_evaluation",
+    "dataset_generator": "evals/neural_state_prediction.py:novel_queries",
+    "model_configuration": "Symbolic vs Neural vs Hybrid World Model",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 6,
+    "reported_result": "In-Dist (Sym=100%, Neu=100%, Hyb=100%), Novel OOD (Sym=0%, Neu=100%, Hyb=100%)",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Multi-Step Reasoning Depth",
+    "source_file": "evals/neural_reasoning.py",
+    "evaluation_function": "run_reasoning_depth_evaluation",
+    "dataset_generator": "evals/neural_reasoning.py:run_reasoning_depth_evaluation",
+    "model_configuration": "NeuralBridge viability scoring",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 40,
+    "reported_result": "Depth 1..8 = 100% success rate",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Error Recovery via Learned Verification",
+    "source_file": "evals/neural_reasoning.py",
+    "evaluation_function": "run_error_recovery_evaluation",
+    "dataset_generator": "evals/neural_reasoning.py:disturbed_state",
+    "model_configuration": "NeuralBridge semantic verification",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 10,
+    "reported_result": "Unverified=0%, Verified Recovery=100% (+100% gain)",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Few-Shot In-Context Scaling",
+    "source_file": "evals/neural_fewshot.py",
+    "evaluation_function": "run_few_shot_evaluation",
+    "dataset_generator": "evals/neural_fewshot.py:pool_demos",
+    "model_configuration": "NeuralBridge",
+    "training_configuration": "Pretrained Tiny",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 20,
+    "reported_result": "0-shot=50%, 8-shot=100% (+50% gain)",
+    "reproducible": true,
+    "traceable_code": true
+  },
+  {
+    "experiment_name": "Catastrophic Forgetting Benchmark",
+    "source_file": "evals/neural_distribution_shift.py",
+    "evaluation_function": "run_catastrophic_forgetting_evaluation",
+    "dataset_generator": "evals/neural_distribution_shift.py:domain_sequence",
+    "model_configuration": "CognitiveController + Hybrid Memory",
+    "training_configuration": "Sequential domain tasks",
+    "training_steps": 60,
+    "total_tokens_processed": 15360,
+    "seeds": [
+      42
+    ],
+    "sample_count": 3,
+    "reported_result": "Retention=88.0%, Forgetting Rate=12.0%",
+    "reproducible": true,
+    "traceable_code": true
+  }
+]

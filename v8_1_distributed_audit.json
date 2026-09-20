@@ -1,0 +1,26 @@
+{
+  "milestone": "NIRMAL-1 V8.1: DISTRIBUTED & CHECKPOINT AUDIT",
+  "distributed_equivalence": {
+    "max_gradient_difference": 1.087784767150879e-06,
+    "is_mathematically_equivalent": true
+  },
+  "checkpoint_fault_tolerance": {
+    "uninterrupted_losses": [
+      6.506502,
+      6.248832,
+      6.461486,
+      6.25207,
+      6.505478
+    ],
+    "resumed_losses": [
+      6.506502,
+      6.248832,
+      6.461486,
+      6.25207,
+      6.505478
+    ],
+    "max_loss_trajectory_discrepancy": 0.0,
+    "deterministic_recovery_passed": true,
+    "tamper_corruption_detected": true
+  }
+}
